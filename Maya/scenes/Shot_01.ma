@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Shot_01.ma
-//Last modified: Thu, Mar 26, 2026 11:06:23 PM
+//Last modified: Fri, Mar 27, 2026 09:29:00 AM
 //Codeset: 1252
 file -rdi 1 -ns "Exterior_Modeling_07" -rfn "Exterior_Modeling_07RN" -op "v=0;"
 		 -typ "mayaAscii" "D:/GithubStuff/University/BathroomCat48Hours/Maya//assets/Exterior_Modeling_07.ma";
@@ -24,21 +24,21 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202511121304-3e6f4fc3f6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "67F0DFB1-4DD5-3438-7EFC-3C9C9B639C2E";
+fileInfo "UUID" "FBE2C3AA-4A36-59D1-493A-43A488638693";
 createNode transform -s -n "persp";
 	rename -uid "7E859479-4657-A5AE-58BD-FC9FB4B0282F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 587.08361890655851 50.193351297563872 393.75401426945911 ;
-	setAttr ".r" -type "double3" -6.3383527296091779 94.999999999999005 0 ;
+	setAttr ".t" -type "double3" 99.165870487639722 102.27514801146805 349.06906863350588 ;
+	setAttr ".r" -type "double3" 1.4616472703830723 29.000000000000497 -1.136406291607769e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "068B79D1-435E-978D-D16A-5BB29724D36E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 591.92225526705477;
+	setAttr ".coi" 256.49040260633581;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 10.961612181874948 -93.930977613039786 458.28154238543385 ;
+	setAttr ".tp" -type "double3" -42.492803731505589 102.07411851567218 143.69959275060211 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A894DECF-4CA9-F239-8480-26A177914C35";
@@ -93,15 +93,15 @@ createNode camera -s -n "sideShape" -p "side";
 createNode transform -n "Environment";
 	rename -uid "B16622EF-4FE9-101E-6760-E6A3D05B24FA";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "95A810EA-4C3D-9978-D908-8381E7485D2C";
+	rename -uid "A9F30989-45AD-4A28-5393-3482745CD3A4";
 	setAttr -s 30 ".lnk";
 	setAttr -s 30 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C45AC50C-4C42-FDA4-4141-8AA92066992E";
+	rename -uid "12BA0DBC-4982-DF18-10C4-CCB4F0C33D9F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4878D3EC-4913-BEA0-83AA-09A54C354A51";
+	rename -uid "69E30FD8-4023-C8A1-C93B-D2B9A9327C78";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "28002201-49CD-F2E5-A89B-0F87301385F2";
+	rename -uid "F3E99BCF-4D81-1FF6-0D77-D9822CB2F44C";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -109,7 +109,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "03ABF4F2-4CC9-16CE-86EF-26AEBEDC1F9C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "070DF1EA-4706-59F6-FEEB-3B8A51B6F1E5";
+	rename -uid "A7494D65-441D-ED04-16EA-04BE165A4D0A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "11C44FE3-4198-3C60-E0F4-6299A08E854B";
 	setAttr ".g" yes;
@@ -170,27 +170,31 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel5\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel5\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|cougar:Render_Cam\" \n"
 		+ "            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n"
-		+ "            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
-		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1699\n            -height 936\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n"
+		+ "            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel6\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel6\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|cougar:Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1699\n            -height 936\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1148\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1148\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "A068DC3C-4CDB-67A2-D2A2-BE9DF19162D6";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 200 -ast 0 -aet 230 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 259 -ast 0 -aet 259 ";
 	setAttr ".st" 6;
 createNode reference -n "Exterior_Modeling_07RN";
 	rename -uid "7B57EF9C-4644-C74C-D3DD-18B8A086D8B5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Exterior_Modeling_07RN"
-		"Exterior_Modeling_07:GuyRN" 0
+		"Exterior_Modeling_07:GuyRN" 1
+		0 "|Exterior_Modeling_07:Guy:References" "|Environment" "-s -r "
 		"Exterior_Modeling_07RN" 0
 		"Exterior_Modeling_07:GuyRN" 2
-		0 "|Exterior_Modeling_07:Guy:References" "|Environment" "-s -r "
 		0 "|Exterior_Modeling_07:Guy:Guy" "|Environment" "-s -r "
-		"Exterior_Modeling_07RN" 147
+		2 "Exterior_Modeling_07:Guy:Geo_Lyr" "displayType" " 1"
+		"Exterior_Modeling_07RN" 148
 		0 "|Exterior_Modeling_07:pCube1" "|Environment" "-s -r "
 		0 "|Exterior_Modeling_07:pCube2" "|Environment" "-s -r "
 		0 "|Exterior_Modeling_07:pCube7" "|Environment" "-s -r "
@@ -342,14 +346,16 @@ createNode reference -n "Exterior_Modeling_07RN";
 		2 "|Environment|Exterior_Modeling_07:group3|Exterior_Modeling_07:group2|Exterior_Modeling_07:group1|Exterior_Modeling_07:pSphere8" 
 		"translateY" " -av"
 		2 "|Environment|Exterior_Modeling_07:group3|Exterior_Modeling_07:group2|Exterior_Modeling_07:group1|Exterior_Modeling_07:pSphere8" 
-		"translateZ" " -av";
+		"translateZ" " -av"
+		2 "|Environment|Exterior_Modeling_07:group3|Exterior_Modeling_07:camera1" 
+		"visibility" " 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "E0D32AA5-4108-C1D4-140F-E0AB7CAC18F0";
 createNode reference -n "GuyRN";
 	rename -uid "B6770F33-471A-9DA2-3C16-E796CEFEFF4A";
-	setAttr -s 551 ".phl";
+	setAttr -s 595 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -901,10 +907,54 @@ createNode reference -n "GuyRN";
 	setAttr ".phl[549]" 0;
 	setAttr ".phl[550]" 0;
 	setAttr ".phl[551]" 0;
+	setAttr ".phl[552]" 0;
+	setAttr ".phl[553]" 0;
+	setAttr ".phl[554]" 0;
+	setAttr ".phl[555]" 0;
+	setAttr ".phl[556]" 0;
+	setAttr ".phl[557]" 0;
+	setAttr ".phl[558]" 0;
+	setAttr ".phl[559]" 0;
+	setAttr ".phl[560]" 0;
+	setAttr ".phl[561]" 0;
+	setAttr ".phl[562]" 0;
+	setAttr ".phl[563]" 0;
+	setAttr ".phl[564]" 0;
+	setAttr ".phl[565]" 0;
+	setAttr ".phl[566]" 0;
+	setAttr ".phl[567]" 0;
+	setAttr ".phl[568]" 0;
+	setAttr ".phl[569]" 0;
+	setAttr ".phl[570]" 0;
+	setAttr ".phl[571]" 0;
+	setAttr ".phl[572]" 0;
+	setAttr ".phl[573]" 0;
+	setAttr ".phl[574]" 0;
+	setAttr ".phl[575]" 0;
+	setAttr ".phl[576]" 0;
+	setAttr ".phl[577]" 0;
+	setAttr ".phl[578]" 0;
+	setAttr ".phl[579]" 0;
+	setAttr ".phl[580]" 0;
+	setAttr ".phl[581]" 0;
+	setAttr ".phl[582]" 0;
+	setAttr ".phl[583]" 0;
+	setAttr ".phl[584]" 0;
+	setAttr ".phl[585]" 0;
+	setAttr ".phl[586]" 0;
+	setAttr ".phl[587]" 0;
+	setAttr ".phl[588]" 0;
+	setAttr ".phl[589]" 0;
+	setAttr ".phl[590]" 0;
+	setAttr ".phl[591]" 0;
+	setAttr ".phl[592]" 0;
+	setAttr ".phl[593]" 0;
+	setAttr ".phl[594]" 0;
+	setAttr ".phl[595]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GuyRN"
 		"GuyRN" 0
-		"GuyRN" 560
+		"GuyRN" 604
 		2 "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl_Grp_parentConstraint1" 
 		"Hip_CtrlW0" " -k 1"
 		2 "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl_Grp_parentConstraint1" 
@@ -1030,1000 +1080,1088 @@ createNode reference -n "GuyRN";
 		"GuyRN.placeHolderList[53]" ""
 		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Chest_Ctrl_Grp|Guy:Chest_Ctrl.visibility" 
 		"GuyRN.placeHolderList[54]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Translate" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Translate" 
 		"GuyRN.placeHolderList[55]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Rotate" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Translate" 
 		"GuyRN.placeHolderList[56]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Rotate" 
 		"GuyRN.placeHolderList[57]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.Follow_Rotate" 
 		"GuyRN.placeHolderList[58]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateX" 
 		"GuyRN.placeHolderList[59]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateX" 
 		"GuyRN.placeHolderList[60]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateY" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateY" 
 		"GuyRN.placeHolderList[61]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateY" 
 		"GuyRN.placeHolderList[62]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[63]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[64]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[65]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[66]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.Follow_Translate" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[67]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.Follow_Rotate" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[68]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[69]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[70]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.rotateOrder" 
 		"GuyRN.placeHolderList[71]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[72]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[73]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[74]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[75]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleY" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[76]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[77]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.visibility" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.visibility" 
 		"GuyRN.placeHolderList[78]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Neck_Ctrl_Grp|Guy:Neck_Ctrl.visibility" 
 		"GuyRN.placeHolderList[79]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.Follow_Translate" 
 		"GuyRN.placeHolderList[80]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.Follow_Rotate" 
 		"GuyRN.placeHolderList[81]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateX" 
 		"GuyRN.placeHolderList[82]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateY" 
 		"GuyRN.placeHolderList[83]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[84]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[85]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[86]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[87]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[88]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[89]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[90]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:Head_Ctrl_Grp|Guy:Head_Ctrl.visibility" 
 		"GuyRN.placeHolderList[91]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateX" 
 		"GuyRN.placeHolderList[92]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateY" 
 		"GuyRN.placeHolderList[93]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[94]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[95]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[96]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[97]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[98]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[99]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[100]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Brow_Ctrl_Grp|Guy:L_Brow_Ctrl.visibility" 
 		"GuyRN.placeHolderList[101]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateX" 
 		"GuyRN.placeHolderList[102]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateY" 
 		"GuyRN.placeHolderList[103]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[104]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[105]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[106]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[107]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[108]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[109]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[110]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Brow_Ctrl_Grp|Guy:R_Brow_Ctrl.visibility" 
 		"GuyRN.placeHolderList[111]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.translateX" 
 		"GuyRN.placeHolderList[112]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.translateY" 
 		"GuyRN.placeHolderList[113]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[114]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[115]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[116]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[117]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[118]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[119]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[120]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:L_Eye_Ctrl_Grp|Guy:L_Eye_Ctrl.visibility" 
 		"GuyRN.placeHolderList[121]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.translateX" 
 		"GuyRN.placeHolderList[122]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.translateY" 
 		"GuyRN.placeHolderList[123]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[124]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[125]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[126]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[127]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[128]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[129]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[130]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Middle_Controls|Guy:R_Eye_Ctrl_Grp|Guy:R_Eye_Ctrl.visibility" 
 		"GuyRN.placeHolderList[131]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[132]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[133]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[134]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[135]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[136]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[137]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[138]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[139]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[140]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[141]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_01_IK_Ctrl_Grp|Guy:L_Arm_01_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[142]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[143]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[144]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[145]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[146]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[147]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[148]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[149]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[150]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[151]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[152]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_03_IK_Ctrl_Grp|Guy:L_Arm_03_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[153]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateX" 
 		"GuyRN.placeHolderList[154]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateY" 
 		"GuyRN.placeHolderList[155]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[156]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[157]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.visibility" 
 		"GuyRN.placeHolderList[158]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[159]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[160]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[161]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[162]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[163]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Arm_IK_Controls|Guy:L_Arm_IK_Handle_Ctrl_Grp|Guy:L_Arm_IK_Handle_Ctrl_Offset_Grp|Guy:L_Arm_IK_Handle_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[164]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[165]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[166]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[167]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[168]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[169]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[170]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[171]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[172]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[173]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_01_Ctrl_Grp|Guy:L_Finger_01_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[174]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[175]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[176]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[177]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[178]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[179]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[180]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[181]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[182]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[183]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_01_Knuckle_02_Ctrl_Grp|Guy:L_Finger_01_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[184]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[185]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[186]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[187]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[188]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[189]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[190]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[191]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[192]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[193]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_01_Ctrl_Grp|Guy:L_Finger_02_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[194]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[195]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[196]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[197]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[198]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[199]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[200]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[201]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[202]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[203]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_02_Ctrl_Grp|Guy:L_Finger_02_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[204]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[205]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[206]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[207]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[208]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[209]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[210]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[211]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[212]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[213]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_02_Knuckle_03_Ctrl_Grp|Guy:L_Finger_02_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[214]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[215]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[216]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[217]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[218]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[219]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[220]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[221]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[222]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[223]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_01_Ctrl_Grp|Guy:L_Finger_03_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[224]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[225]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[226]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[227]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[228]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[229]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[230]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[231]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[232]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[233]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_02_Ctrl_Grp|Guy:L_Finger_03_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[234]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[235]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[236]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[237]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[238]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[239]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[240]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[241]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[242]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[243]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_03_Knuckle_03_Ctrl_Grp|Guy:L_Finger_03_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[244]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[245]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[246]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[247]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[248]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[249]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[250]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[251]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[252]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[253]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_01_Ctrl_Grp|Guy:L_Finger_04_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[254]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[255]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[256]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[257]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[258]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[259]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[260]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[261]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[262]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[263]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_02_Ctrl_Grp|Guy:L_Finger_04_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[264]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[265]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[266]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[267]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[268]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[269]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[270]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[271]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[272]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[273]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_04_Knuckle_03_Ctrl_Grp|Guy:L_Finger_04_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[274]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[275]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[276]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[277]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[278]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[279]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[280]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[281]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[282]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[283]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_01_Ctrl_Grp|Guy:L_Finger_05_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[284]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[285]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[286]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[287]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[288]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[289]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[290]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[291]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[292]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[293]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_02_Ctrl_Grp|Guy:L_Finger_05_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[294]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[295]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[296]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[297]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[298]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[299]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[300]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[301]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[302]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[303]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Left_Arm_Controls|Guy:Left_Finger_Controls|Guy:L_Finger_05_Knuckle_03_Ctrl_Grp|Guy:L_Finger_05_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[304]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[305]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[306]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[307]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[308]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[309]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[310]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[311]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[312]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[313]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_01_FK_Ctrl_Grp|Guy:R_Arm_01_FK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[314]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[315]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[316]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[317]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[318]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[319]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[320]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[321]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[322]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[323]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_02_FK_Ctrl_Grp|Guy:R_Arm_02_FK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[324]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[325]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[326]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[327]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[328]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleY" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[329]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[330]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.visibility" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[331]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[332]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateY" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[333]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[334]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[335]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[336]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.rotateOrder" 
 		"GuyRN.placeHolderList[337]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[338]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[339]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[340]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[341]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateX" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[342]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[343]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateZ" 
+		5 3 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[344]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Arm_FK_Controls|Guy:R_Arm_03_FK_Ctrl_Grp|Guy:R_Arm_03_FK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[345]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[346]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[347]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[348]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[349]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[350]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[351]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[352]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[353]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[354]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_01_Ctrl_Grp|Guy:R_Finger_01_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[355]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[356]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[357]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[358]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[359]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[360]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[361]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[362]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[363]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[364]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_01_Knuckle_02_Ctrl_Grp|Guy:R_Finger_01_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[365]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[366]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[367]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[368]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[369]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[370]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[371]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[372]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[373]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[374]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_01_Ctrl_Grp|Guy:R_Finger_02_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[375]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[376]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[377]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[378]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[379]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[380]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[381]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[382]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[383]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[384]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_02_Ctrl_Grp|Guy:R_Finger_02_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[385]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[386]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[387]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[388]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[389]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[390]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[391]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[392]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[393]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[394]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_02_Knuckle_03_Ctrl_Grp|Guy:R_Finger_02_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[395]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[396]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[397]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[398]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[399]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[400]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[401]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[402]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[403]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[404]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_01_Ctrl_Grp|Guy:R_Finger_03_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[405]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[406]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[407]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[408]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[409]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[410]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[411]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[412]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[413]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[414]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_02_Ctrl_Grp|Guy:R_Finger_03_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[415]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[416]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[417]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[418]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[419]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[420]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[421]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[422]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[423]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[424]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_03_Knuckle_03_Ctrl_Grp|Guy:R_Finger_03_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[425]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[426]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[427]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[428]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[429]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[430]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[431]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[432]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[433]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[434]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_01_Ctrl_Grp|Guy:R_Finger_04_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[435]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[436]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[437]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[438]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[439]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[440]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[441]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[442]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[443]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[444]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_02_Ctrl_Grp|Guy:R_Finger_04_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[445]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[446]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[447]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[448]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[449]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[450]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[451]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[452]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[453]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[454]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_04_Knuckle_03_Ctrl_Grp|Guy:R_Finger_04_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[455]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateX" 
 		"GuyRN.placeHolderList[456]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateY" 
 		"GuyRN.placeHolderList[457]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[458]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[459]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[460]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[461]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[462]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[463]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[464]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_01_Ctrl_Grp|Guy:R_Finger_05_Knuckle_01_Ctrl.visibility" 
 		"GuyRN.placeHolderList[465]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateX" 
 		"GuyRN.placeHolderList[466]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateY" 
 		"GuyRN.placeHolderList[467]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[468]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[469]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[470]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[471]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[472]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[473]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[474]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_02_Ctrl_Grp|Guy:R_Finger_05_Knuckle_02_Ctrl.visibility" 
 		"GuyRN.placeHolderList[475]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateX" 
 		"GuyRN.placeHolderList[476]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateY" 
 		"GuyRN.placeHolderList[477]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[478]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[479]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[480]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[481]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[482]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[483]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[484]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Arm_Controls|Guy:Right_Arm_Controls|Guy:Right_Finger_Controls|Guy:R_Finger_05_Knuckle_03_Ctrl_Grp|Guy:R_Finger_05_Knuckle_03_Ctrl.visibility" 
 		"GuyRN.placeHolderList[485]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[486]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[487]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[488]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[489]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[490]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[491]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[492]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[493]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[494]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[495]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_01_IK_Ctrl_Grp|Guy:L_Leg_01_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[496]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[497]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[498]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[499]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.Operating_Space" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[500]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[501]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[502]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[503]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[504]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[505]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[506]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_03_IK_Ctrl_Grp|Guy:L_Leg_03_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[507]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.IKFK_Switch" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateX" 
 		"GuyRN.placeHolderList[508]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateY" 
 		"GuyRN.placeHolderList[509]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[510]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[511]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.visibility" 
 		"GuyRN.placeHolderList[512]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[513]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[514]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[515]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[516]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[517]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Left_Leg_Controls|Guy:Left_Leg_IK_Controls|Guy:L_Leg_IK_Handle_Ctrl_Grp|Guy:L_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:L_Leg_IK_Handle_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[518]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.IKFK_Switch" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[519]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[520]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[521]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[522]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[523]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[524]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[525]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[526]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[527]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[528]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_01_IK_Ctrl_Grp|Guy:R_Leg_01_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[529]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.IKFK_Switch" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[530]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[531]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[532]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[533]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateX" 
 		"GuyRN.placeHolderList[534]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[535]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.translateY" 
 		"GuyRN.placeHolderList[536]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.visibility" 
 		"GuyRN.placeHolderList[537]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[538]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[539]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_03_IK_Ctrl_Grp|Guy:R_Leg_03_IK_Ctrl.scaleZ" 
 		"GuyRN.placeHolderList[540]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.IKFK_Switch" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateX" 
 		"GuyRN.placeHolderList[541]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.visibility" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateY" 
 		"GuyRN.placeHolderList[542]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.translateZ" 
 		"GuyRN.placeHolderList[543]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.Operating_Space" 
 		"GuyRN.placeHolderList[544]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.visibility" 
 		"GuyRN.placeHolderList[545]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateX" 
 		"GuyRN.placeHolderList[546]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateY" 
 		"GuyRN.placeHolderList[547]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateZ" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.rotateZ" 
 		"GuyRN.placeHolderList[548]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.scaleX" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleX" 
 		"GuyRN.placeHolderList[549]" ""
-		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.scaleY" 
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleY" 
 		"GuyRN.placeHolderList[550]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:Leg_Controls|Guy:Right_Leg_Controls|Guy:Right_Leg_IK_Controls|Guy:R_Leg_IK_Handle_Ctrl_Grp|Guy:R_Leg_IK_Handle_Ctrl_Offset_Grp|Guy:R_Leg_IK_Handle_Ctrl.scaleZ" 
+		"GuyRN.placeHolderList[551]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.IKFK_Switch" 
+		"GuyRN.placeHolderList[552]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.visibility" 
+		"GuyRN.placeHolderList[553]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateX" 
+		"GuyRN.placeHolderList[554]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateY" 
+		"GuyRN.placeHolderList[555]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.translateZ" 
+		"GuyRN.placeHolderList[556]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateX" 
+		"GuyRN.placeHolderList[557]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateY" 
+		"GuyRN.placeHolderList[558]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.rotateZ" 
+		"GuyRN.placeHolderList[559]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleX" 
+		"GuyRN.placeHolderList[560]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleY" 
+		"GuyRN.placeHolderList[561]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Arm_IKFK_Ctrl_Grp|Guy:L_Arm_IKFK_Ctrl.scaleZ" 
+		"GuyRN.placeHolderList[562]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.IKFK_Switch" 
+		"GuyRN.placeHolderList[563]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.visibility" 
+		"GuyRN.placeHolderList[564]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateX" 
+		"GuyRN.placeHolderList[565]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateY" 
+		"GuyRN.placeHolderList[566]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.translateZ" 
+		"GuyRN.placeHolderList[567]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateX" 
+		"GuyRN.placeHolderList[568]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateY" 
+		"GuyRN.placeHolderList[569]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.rotateZ" 
+		"GuyRN.placeHolderList[570]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleX" 
+		"GuyRN.placeHolderList[571]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleY" 
+		"GuyRN.placeHolderList[572]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Arm_IKFK_Ctrl_Grp|Guy:R_Arm_IKFK_Ctrl.scaleZ" 
+		"GuyRN.placeHolderList[573]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.IKFK_Switch" 
+		"GuyRN.placeHolderList[574]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.visibility" 
+		"GuyRN.placeHolderList[575]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateX" 
+		"GuyRN.placeHolderList[576]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateY" 
+		"GuyRN.placeHolderList[577]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.translateZ" 
+		"GuyRN.placeHolderList[578]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateX" 
+		"GuyRN.placeHolderList[579]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateY" 
+		"GuyRN.placeHolderList[580]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.rotateZ" 
+		"GuyRN.placeHolderList[581]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleX" 
+		"GuyRN.placeHolderList[582]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleY" 
+		"GuyRN.placeHolderList[583]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:L_Leg_IKFK_Ctrl_Grp|Guy:L_Leg_IKFK_Ctrl.scaleZ" 
+		"GuyRN.placeHolderList[584]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.IKFK_Switch" 
+		"GuyRN.placeHolderList[585]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.visibility" 
+		"GuyRN.placeHolderList[586]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateX" 
+		"GuyRN.placeHolderList[587]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateY" 
+		"GuyRN.placeHolderList[588]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.translateZ" 
+		"GuyRN.placeHolderList[589]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateX" 
+		"GuyRN.placeHolderList[590]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateY" 
+		"GuyRN.placeHolderList[591]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.rotateZ" 
+		"GuyRN.placeHolderList[592]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.scaleX" 
+		"GuyRN.placeHolderList[593]" ""
+		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.scaleY" 
+		"GuyRN.placeHolderList[594]" ""
 		5 4 "GuyRN" "|Guy:Guy|Guy:Controls|Guy:Transform_Ctrl|Guy:IKFK_Switches|Guy:R_Leg_IKFK_Ctrl_Grp|Guy:R_Leg_IKFK_Ctrl.scaleZ" 
-		"GuyRN.placeHolderList[551]" "";
+		"GuyRN.placeHolderList[595]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode displayLayer -n "Env_Lyr";
@@ -2101,62 +2239,63 @@ createNode animCurveTU -n "R_Finger_03_Knuckle_02_Ctrl_visibility";
 	rename -uid "0F0A9617-4658-3963-3AC6-1D9C5047F10D";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_03_Knuckle_02_Ctrl_translateX";
 	rename -uid "E8948AE3-48F7-2E70-E2B2-62A9CF330590";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_02_Ctrl_translateY";
 	rename -uid "4C49F56A-41D2-19EA-E8EC-61A0427079D6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_02_Ctrl_translateZ";
 	rename -uid "5D4D523C-4211-36BF-9E34-E2B160B35B3D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateX";
 	rename -uid "7F2E7D1B-4AC3-0C95-C332-4E990588AE06";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateY";
 	rename -uid "A353B124-4613-B42A-0686-CC8984DD3CFC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "8F8C6BB9-4EFC-485C-8EEE-DAA74452AD66";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 21.822313300479209;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 21.822313300479209 197 21.822313300479209
+		 211 33.337083215879154;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_02_Ctrl_scaleX";
 	rename -uid "5B155635-4A7D-1A05-18D2-31A61F63B388";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_02_Ctrl_scaleY";
 	rename -uid "5F0FFE78-4050-BDAC-6690-3CB89AC9A222";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_02_Ctrl_scaleZ";
 	rename -uid "A4A30251-478D-C852-0C38-0582BEB899F9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Leg_IK_Handle_Ctrl_visibility";
 	rename -uid "48A86732-4A42-E0B4-84B4-4D9A9B0E82C0";
 	setAttr ".tan" 9;
@@ -2293,62 +2432,63 @@ createNode animCurveTU -n "R_Finger_03_Knuckle_03_Ctrl_visibility";
 	rename -uid "670647FC-4CE8-0182-D648-A2A953ED2FEB";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_03_Knuckle_03_Ctrl_translateX";
 	rename -uid "BDBC6184-4DB4-FA59-575B-7BA31EAF94A3";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_03_Ctrl_translateY";
 	rename -uid "CB02BF2E-4688-32EE-818B-DC81FC642A3C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_03_Ctrl_translateZ";
 	rename -uid "BC2FFAAC-4864-1890-60DE-89A25F337EFC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateX";
 	rename -uid "06509E27-4EFD-B5F0-B05A-12A68AAC8472";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateY";
 	rename -uid "14CA8BF9-450C-65EC-041D-8CBAE058132C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "549F6AD6-4B23-E897-DFCF-AAA93CAD2BE1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -13.322297918952813;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -13.322297918952813 197 -13.322297918952813
+		 211 57.188972351657142;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_03_Ctrl_scaleX";
 	rename -uid "B38FB394-4028-10B5-A73E-93B598C4BDDC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_03_Ctrl_scaleY";
 	rename -uid "FCFC52E6-4571-E601-5AC8-37BA1F6F652E";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_03_Ctrl_scaleZ";
 	rename -uid "AD0D9788-4C57-9D82-9DF5-D595DD63F402";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Finger_03_Knuckle_02_Ctrl_visibility";
 	rename -uid "0FDD9851-4518-C416-F80D-4AB28370EF48";
 	setAttr ".tan" 9;
@@ -3031,122 +3171,128 @@ createNode animCurveTU -n "R_Arm_03_FK_Ctrl_visibility";
 	rename -uid "EC392AAA-46BF-67B8-701B-B6AE974326B8";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 210 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateX";
 	rename -uid "12841520-4A13-518A-EFD8-B6A1A8B981FC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 210 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateY";
 	rename -uid "E660C3FC-4A48-E739-F2DF-DFB3E7E4CCBD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 210 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateZ";
 	rename -uid "3336DF4F-4B52-4D6F-9569-D59AED5CEFAB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 210 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateX";
 	rename -uid "10CF694A-468D-A11D-3E32-8D85C817A785";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 31.414545462992809;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 31.414545462992809 195 31.414545462992809
+		 210 -55.152276850916095;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateY";
 	rename -uid "B0EDE45E-47F2-A6D7-01A5-DEA0C1695589";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -59.300121542021586;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -59.300121542021586 195 -59.300121542021586
+		 210 30.438854577620376;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateZ";
 	rename -uid "73249BD1-4DDC-7D1E-35B6-75B94942C205";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -15.012575041067633;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -15.012575041067633 195 -15.012575041067633
+		 210 -19.412968277801852;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleX";
 	rename -uid "D14B66F9-499E-99F7-A29D-94946F45B66B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 210 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleY";
 	rename -uid "3A7AB94C-4491-45A0-86C3-ADA3B32848D4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 210 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleZ";
 	rename -uid "C3B543D0-4FAC-D402-F68C-5087C91258BF";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 210 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_01_FK_Ctrl_visibility";
 	rename -uid "EECB9615-4D8E-3514-9D2C-C98D2CEF37B0";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 191 1 205 1 219 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "R_Arm_01_FK_Ctrl_translateX";
 	rename -uid "FF138948-42C5-3BCD-0717-81A6F551DCF8";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 0 191 0 205 0 219 0;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTL -n "R_Arm_01_FK_Ctrl_translateY";
 	rename -uid "3CF15B3A-4956-7199-904A-C4BED23BEFE2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 0 191 0 205 0 219 0;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTL -n "R_Arm_01_FK_Ctrl_translateZ";
 	rename -uid "30335505-41F6-C206-FB8F-7DB67B38A4B9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 0 191 0 205 0 219 0;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateX";
 	rename -uid "25C5C884-4C01-0071-529D-7DA6355D2ED4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 120.24554222199609;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 120.24554222199609 191 120.24554222199609
+		 205 95.105292204730759 219 91.737415853933356;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateY";
 	rename -uid "D5A6F1C1-4091-DBAC-A51F-BF9C480E520B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -30.612787083411803;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 -30.612787083411803 191 -30.612787083411803
+		 205 -9.7579612718926914 219 -9.1382791686178955;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateZ";
 	rename -uid "733CB266-4229-5F24-7698-5B92850BD9CE";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -9.7178636848608182;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 -9.7178636848608182 191 -9.7178636848608182
+		 205 7.1424075892892027 219 0.045974158087347901;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTU -n "R_Arm_01_FK_Ctrl_scaleX";
 	rename -uid "B7683D8B-426E-A86D-DD61-CCACED37C578";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 191 1 205 1 219 1;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTU -n "R_Arm_01_FK_Ctrl_scaleY";
 	rename -uid "168B9FA8-4C82-4BDE-1E4B-A0BBF131A2B7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 191 1 205 1 219 1;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTU -n "R_Arm_01_FK_Ctrl_scaleZ";
 	rename -uid "AD3087B3-4CEE-B39B-C12A-7984DA7E4C74";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 191 1 205 1 219 1;
+	setAttr -s 4 ".kot[0:3]"  5 16 16 16;
 createNode animCurveTU -n "L_Finger_02_Knuckle_01_Ctrl_visibility";
 	rename -uid "C21F07CD-4688-64DD-4771-9EB83AEFC696";
 	setAttr ".tan" 9;
@@ -3271,74 +3417,74 @@ createNode animCurveTU -n "Neck_Ctrl_visibility";
 	rename -uid "D0692C1C-4A8D-56F0-6146-76A9839B7DEA";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Neck_Ctrl_translateX";
 	rename -uid "4CFCFBB5-485E-E35C-EB0D-D38D9D430840";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "Neck_Ctrl_translateY";
 	rename -uid "6637EB27-419D-2219-0E22-0085D48533CC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "Neck_Ctrl_translateZ";
 	rename -uid "5CCDC5A9-4E48-9378-26C3-4D9EBC24CCE9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	rename -uid "D83073DF-4566-7203-ABF8-50B1B4EB4980";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 -23.588952551205711;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	rename -uid "563EB714-4172-4E1D-E706-52AD462C68DB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 -2.5819197281321462;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Neck_Ctrl_rotateZ";
 	rename -uid "9D1B9F43-4FAE-2C53-3FF3-ADA058CFE4B0";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 179 0 200 -5.7535687778110249;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Neck_Ctrl_scaleX";
 	rename -uid "25CCD859-4B43-12EE-4039-B0A2A3DE2912";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Neck_Ctrl_scaleY";
 	rename -uid "DA210E90-4DD3-54E3-BAAA-489A4F0401BF";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Neck_Ctrl_scaleZ";
 	rename -uid "58345C27-42D0-A6BE-CAEE-8383A876E9D4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Neck_Ctrl_Follow_Translate";
 	rename -uid "50416F37-494F-3D67-232A-73808E81C399";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Neck_Ctrl_Follow_Rotate";
 	rename -uid "FDEAC7CF-48C5-78AB-FD22-41B43E0A504D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 179 1 200 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Finger_05_Knuckle_03_Ctrl_visibility";
 	rename -uid "3D5DCD17-4067-24E0-3F61-CCB6F9CC0745";
 	setAttr ".tan" 9;
@@ -3535,74 +3681,75 @@ createNode animCurveTU -n "Spine_Ctrl_visibility";
 	rename -uid "F3AC4D2A-406A-F870-5C16-818558C6FEF8";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 187 1 202 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Spine_Ctrl_translateX";
 	rename -uid "07B7C6A9-4993-168C-83E9-A7AA632B76E4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "Spine_Ctrl_translateY";
 	rename -uid "C3ED4485-4EC3-3A2F-E220-5D86AC39309D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "Spine_Ctrl_translateZ";
 	rename -uid "694632BF-4ABE-C23B-C0DE-7C8CF79CB6D9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Spine_Ctrl_rotateX";
 	rename -uid "EA125426-44BF-969A-44B5-6B8E6CE14B8F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 -12.791525404716745;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Spine_Ctrl_rotateY";
 	rename -uid "FC8162DE-4B7A-467C-DBDB-788214AC978B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 -5.6713988678152623;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "Spine_Ctrl_rotateZ";
 	rename -uid "50F305C8-4CDB-BCBC-FB6C-DF83222E6754";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 15.318134449687912;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 15.318134449687912 187 15.318134449687912
+		 202 1.7072313152905256;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Spine_Ctrl_scaleX";
 	rename -uid "85F2F686-469F-F0DE-FCA7-5EA1B8A9A439";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 187 1 202 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Spine_Ctrl_scaleY";
 	rename -uid "DA3A161E-4CEB-3847-BBAF-8BBB6A6C3021";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 187 1 202 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Spine_Ctrl_scaleZ";
 	rename -uid "859D50E0-4BEB-4401-1345-19976B743C2E";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 187 1 202 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Spine_Ctrl_Follow_Translate";
 	rename -uid "183D67E5-4782-E13E-6A48-4AA3524CE5BA";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 187 1 202 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "Spine_Ctrl_Follow_Rotate";
 	rename -uid "46F46640-4335-6102-35B7-F28671187EF3";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 187 0 202 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Finger_05_Knuckle_01_Ctrl_visibility";
 	rename -uid "FA409644-4623-C7A1-D633-EE9D55698942";
 	setAttr ".tan" 9;
@@ -3787,62 +3934,63 @@ createNode animCurveTU -n "R_Arm_02_FK_Ctrl_visibility";
 	rename -uid "6A1290BC-42C1-A4FA-BC47-338EE155829E";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Arm_02_FK_Ctrl_translateX";
 	rename -uid "A5A6E461-4D20-267B-4B89-6CB84255D104";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Arm_02_FK_Ctrl_translateY";
 	rename -uid "CDBFD26F-409F-A702-AD69-178A4B5D6D6F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Arm_02_FK_Ctrl_translateZ";
 	rename -uid "59F02121-4A15-E331-5E8B-EC8044387ED4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateX";
 	rename -uid "B7BA3B92-48AD-3173-BACA-2AB5AD953182";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateY";
 	rename -uid "A16DEFE9-4DAE-B03A-E95D-B28154053383";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 195 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateZ";
 	rename -uid "6BEB4BEB-453C-4E62-4201-E586765631A8";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 83.764400327713261;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 83.764400327713261 195 83.764400327713261
+		 211 44.578769993601099;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_02_FK_Ctrl_scaleX";
 	rename -uid "C1821749-48F5-DD2A-257C-3B95C1191FB6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_02_FK_Ctrl_scaleY";
 	rename -uid "BF32A509-4F02-93D3-ED2A-8791883D8F86";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_02_FK_Ctrl_scaleZ";
 	rename -uid "5DDADAF8-4A46-8459-9E5F-5E94B6D4B395";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 195 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Finger_04_Knuckle_02_Ctrl_visibility";
 	rename -uid "80AD0EF0-4A0F-20B0-3952-BE8BEC6E4DB0";
 	setAttr ".tan" 9;
@@ -3907,422 +4055,433 @@ createNode animCurveTU -n "R_Finger_05_Knuckle_02_Ctrl_visibility";
 	rename -uid "C38CF4AE-4938-3320-8849-76B1E47FE173";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_05_Knuckle_02_Ctrl_translateX";
 	rename -uid "521AF7A3-47C4-6CB8-568B-4A920C7345DD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_02_Ctrl_translateY";
 	rename -uid "9645B43D-4A7F-8A3A-E756-69B2189DBA23";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_02_Ctrl_translateZ";
 	rename -uid "9500D86E-42C5-846A-8C01-8AAC7CC2D97B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_02_Ctrl_rotateX";
 	rename -uid "88C0F5B7-4B4D-7E3F-9E82-6CBDF22357EC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_02_Ctrl_rotateY";
 	rename -uid "64EEA206-47C0-D937-DF2E-1CBA056CCE29";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "794324BF-4330-7F66-7B39-A2AEE99EA03B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 21.822313300479209;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 21.822313300479209 197 21.822313300479209
+		 211 33.337083215879154;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_02_Ctrl_scaleX";
 	rename -uid "2BE313B2-4605-CA6E-5998-3BBB9666C8FA";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_02_Ctrl_scaleY";
 	rename -uid "D558E09B-400C-FDD6-1A12-C9BB9F8260F7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_02_Ctrl_scaleZ";
 	rename -uid "11C0E062-48BD-35CA-6DB9-48AB3FB2548F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_01_Ctrl_visibility";
 	rename -uid "B6012027-4CD2-33A3-307F-97869869BE77";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_03_Knuckle_01_Ctrl_translateX";
 	rename -uid "D29D0C85-4F8C-EC2E-C200-A69A96C69047";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_01_Ctrl_translateY";
 	rename -uid "01940B1A-4108-4A12-5BFE-EFACA3D44A69";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_03_Knuckle_01_Ctrl_translateZ";
 	rename -uid "4DEFADFD-45E1-BF47-6523-4897228269E4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_01_Ctrl_rotateX";
 	rename -uid "DA26621A-4CDD-F5F3-BF8B-2EAE28F0D9C4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_01_Ctrl_rotateY";
 	rename -uid "9B6F78DD-4B26-D8B5-CA20-6BA92F797946";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_03_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "FFFB34F1-47A5-FA6C-D343-9D984AA87520";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 14.959053516724049;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 14.959053516724049 197 14.959053516724049
+		 211 -37.391217036681731;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_01_Ctrl_scaleX";
 	rename -uid "22328537-4954-4D8F-6EDB-A894FF1B4D35";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_01_Ctrl_scaleY";
 	rename -uid "FD7F4F7B-4FB6-AB47-4D9B-F4B7992006F6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_03_Knuckle_01_Ctrl_scaleZ";
 	rename -uid "EFC1CCB6-481F-A47F-E2E7-7FB46560F8FB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_03_Ctrl_visibility";
 	rename -uid "80CED265-4DB3-EDC9-561E-FEA8615F6606";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_04_Knuckle_03_Ctrl_translateX";
 	rename -uid "5651915C-4514-9783-E67C-26ACA28C207C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_03_Ctrl_translateY";
 	rename -uid "8961987C-4805-F8E1-14C7-15802F7D4CC6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_03_Ctrl_translateZ";
 	rename -uid "3DB95A90-43BE-1B34-3ABC-6CAC0D876017";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_03_Ctrl_rotateX";
 	rename -uid "234AAD95-432A-5DBF-00D2-6E82F044A181";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_03_Ctrl_rotateY";
 	rename -uid "2C6EE825-48C9-EB67-0E07-92B81675D4CD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "5DF6A56B-48D0-1C5F-371D-A0A070CA40DB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -13.322297918952813;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -13.322297918952813 197 -13.322297918952813
+		 211 57.188972351657142;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_03_Ctrl_scaleX";
 	rename -uid "2888074E-4B88-E595-BC3D-B5824BAAE430";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_03_Ctrl_scaleY";
 	rename -uid "8651D4DC-4121-6219-3095-A7BAC5E0D2BD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_03_Ctrl_scaleZ";
 	rename -uid "AD540736-48E4-0849-13B5-C6BCE105D7D4";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_01_Ctrl_visibility";
 	rename -uid "B4DF65EA-4F96-C67D-EF09-30B2A4CED35B";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_02_Knuckle_01_Ctrl_translateX";
 	rename -uid "DBD3F725-4B9F-D45A-D797-73879ACBB408";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_01_Ctrl_translateY";
 	rename -uid "E29F6ED6-4378-380F-F179-9085ADE4700F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_01_Ctrl_translateZ";
 	rename -uid "DC1E3BBB-4C96-B83F-6F22-1B9533BD92CD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateX";
 	rename -uid "6D8A85D7-4AAE-885B-0BA5-E3AB2F3D736C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateY";
 	rename -uid "B9776B5E-4B95-8154-5E89-22A7FDC11439";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 24.502574020467666;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "507ACC73-4779-AC1C-6D30-66B6ECC76C79";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 14.959053516724049;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 14.959053516724049 197 14.959053516724049
+		 211 -37.391217036681759;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_01_Ctrl_scaleX";
 	rename -uid "3099B30D-40CB-312D-46BD-BD987C67A5C9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_01_Ctrl_scaleY";
 	rename -uid "0E2B7A0C-4655-979E-5B54-ABBA86D74442";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_01_Ctrl_scaleZ";
 	rename -uid "5E009DE3-46DD-09B5-856C-D4AA38747E09";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_01_Ctrl_visibility";
 	rename -uid "0DB06803-4D36-CACA-F67D-9C8D0B87E933";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_01_Knuckle_01_Ctrl_translateX";
 	rename -uid "9A500ECC-49B9-34C8-942C-A283CED9422A";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -3.2123217896495619;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -3.2123217896495619 197 -3.2123217896495619
+		 211 -2.4838214326541905;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_01_Knuckle_01_Ctrl_translateY";
 	rename -uid "57D37E13-4DCF-93B4-9927-5885DA4ADA18";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 2.6447381629179465;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 2.6447381629179465 197 2.6447381629179465
+		 211 4.0376960876568457;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_01_Knuckle_01_Ctrl_translateZ";
 	rename -uid "2082C88D-44FD-CD8E-CE0E-F289AD82191D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 2.5923809614239142;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 2.5923809614239142 197 2.5923809614239142
+		 211 -0.57455085265665828;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateX";
 	rename -uid "101EC68B-447F-20FF-C816-629A944FE20C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 60.513096600331394;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 60.513096600331394 197 60.513096600331394
+		 211 -59.640027538918922;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateY";
 	rename -uid "19432AAD-4CE1-A70F-F246-C1A970F175BD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 17.736587849888952;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 17.736587849888952 197 17.736587849888952
+		 211 32.734693369267227;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "372DCC98-4A76-6956-A1BE-3D979F7B83DD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 78.375987426619886;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 78.375987426619886 197 78.375987426619886
+		 211 8.8219014279501682;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_01_Ctrl_scaleX";
 	rename -uid "2426967C-4D8F-A3E3-F097-E782B74F40AD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_01_Ctrl_scaleY";
 	rename -uid "CA6336C6-4A38-905B-22B5-F191B6913F7B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_01_Ctrl_scaleZ";
 	rename -uid "CB35C327-4F45-A4A6-04B4-46B7DD64F346";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_02_Ctrl_visibility";
 	rename -uid "F74B8AF8-4017-E005-425A-4F8DDF0377C6";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_01_Knuckle_02_Ctrl_translateX";
 	rename -uid "13C7C67B-4AD4-A74E-1EDE-AAA61043ADA7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_01_Knuckle_02_Ctrl_translateY";
 	rename -uid "2AA698D7-4738-A621-0715-C6A796A412F5";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_01_Knuckle_02_Ctrl_translateZ";
 	rename -uid "B860FEA5-4317-FE49-788F-4BA2FA96A88A";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateX";
 	rename -uid "8992C13F-4B37-27B2-BFCE-6E89E1F0274C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateY";
 	rename -uid "2DD40BEF-4F97-F3B0-A6C5-3D8F2AD43053";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "ED572440-4920-5ACB-93D0-D0B5505FF5F9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 38.318715710498807;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_02_Ctrl_scaleX";
 	rename -uid "EC457FED-4478-95A0-CBD6-2E877B98C848";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_02_Ctrl_scaleY";
 	rename -uid "856B3CA1-41AF-2631-B830-D6BC329607AE";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_01_Knuckle_02_Ctrl_scaleZ";
 	rename -uid "CB73030B-47AA-EB40-CC24-A4AF4769C962";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_01_Ctrl_visibility";
 	rename -uid "B4150A56-48CC-B095-64BC-60ACF4362E5F";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_05_Knuckle_01_Ctrl_translateX";
 	rename -uid "C8410CBB-4699-DBB5-8678-B89C2340D6C2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_01_Ctrl_translateY";
 	rename -uid "EE5C4A81-4733-18CA-52FD-CF9DEE45EC2E";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_01_Ctrl_translateZ";
 	rename -uid "5E86D9A9-493A-C36B-6691-2A83B4AECA0D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateX";
 	rename -uid "9A65EED9-4D53-3403-5BD1-D9B7262A954C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateY";
 	rename -uid "9265A501-4666-668D-67AE-89AD7565873A";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 -25.328556737453731;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "EB068232-4721-7CFE-D6A0-F09880638367";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 21.822313300479209;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 21.822313300479209 197 21.822313300479209
+		 211 -30.527957252926644;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_01_Ctrl_scaleX";
 	rename -uid "00031E28-47AE-EB91-D7DA-7B9761FC6592";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_01_Ctrl_scaleY";
 	rename -uid "DCE29D96-4A7E-5CB7-0339-3DA072A03F83";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_01_Ctrl_scaleZ";
 	rename -uid "C24048ED-4839-7D03-EF7A-428682E28CA6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Leg_IK_Handle_Ctrl_visibility";
 	rename -uid "7E458D98-4C14-7FCA-3334-66B97E2A20C3";
 	setAttr ".tan" 9;
@@ -4393,62 +4552,63 @@ createNode animCurveTU -n "R_Finger_04_Knuckle_02_Ctrl_visibility";
 	rename -uid "EC00E971-4D42-B84B-62D5-1CB16D1171F2";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_04_Knuckle_02_Ctrl_translateX";
 	rename -uid "AA830B30-4DF5-DB9C-89BF-448F41FC835C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_02_Ctrl_translateY";
 	rename -uid "4B724348-4091-EC5A-C781-D1AB22E48653";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_02_Ctrl_translateZ";
 	rename -uid "5F7BA44F-4483-3251-F7F7-CDB144C1AAD2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_02_Ctrl_rotateX";
 	rename -uid "FF2DC63D-4B30-714A-82EC-2EA9196F2279";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_02_Ctrl_rotateY";
 	rename -uid "E8F67566-46F0-7606-A01A-6590BBC04967";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "909154A6-409C-E965-05A1-BD8338C5E9DC";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 21.822313300479209;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 21.822313300479209 197 21.822313300479209
+		 211 33.337083215879154;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_02_Ctrl_scaleX";
 	rename -uid "0BB9F773-4145-0312-4435-729C499E3603";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_02_Ctrl_scaleY";
 	rename -uid "57067F50-44D7-89AB-C16E-8D9DAAD8C351";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_02_Ctrl_scaleZ";
 	rename -uid "804BCC93-4AB1-74BE-5405-5C8E73715539";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Arm_IKFK_Ctrl_visibility";
 	rename -uid "9B2EBBE9-481B-AC9B-B3D0-40BB133C47F7";
 	setAttr ".tan" 9;
@@ -4519,242 +4679,245 @@ createNode animCurveTU -n "R_Finger_04_Knuckle_01_Ctrl_visibility";
 	rename -uid "D5D153F3-4D31-79AB-E572-358410C3365C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_04_Knuckle_01_Ctrl_translateX";
 	rename -uid "5DCA5F21-415E-D44E-2B1E-32BF2AD3B01A";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_01_Ctrl_translateY";
 	rename -uid "BA3291BB-457C-C8B8-3004-8EA3638F89DE";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_04_Knuckle_01_Ctrl_translateZ";
 	rename -uid "3BA31CA4-4B1D-27F9-A21B-33BD46B1BB3D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateX";
 	rename -uid "54F4778E-4F63-A249-3499-B3980B468C94";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateY";
 	rename -uid "4592AFD3-4B70-CD26-CAF6-CEB4B9EF8553";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "3D55EC70-4EA6-F885-47C1-CFB584A8D8E0";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 14.959053516724049;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 14.959053516724049 197 14.959053516724049
+		 211 -37.391217036681731;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_01_Ctrl_scaleX";
 	rename -uid "43E0960A-4868-9507-643A-7FA351A4A132";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_01_Ctrl_scaleY";
 	rename -uid "8D338199-4FB1-719D-9512-0CB814551CA2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_04_Knuckle_01_Ctrl_scaleZ";
 	rename -uid "EB0D6B8F-4084-457B-FC08-419AB80D797B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_03_Ctrl_visibility";
 	rename -uid "4EA34453-4FBF-3239-4CD7-CAB1439D51FB";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_05_Knuckle_03_Ctrl_translateX";
 	rename -uid "B9138417-4083-D0A4-C9A0-66B02DE3A31F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_03_Ctrl_translateY";
 	rename -uid "90163600-4D78-3F71-35A8-76BB6560B08B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_05_Knuckle_03_Ctrl_translateZ";
 	rename -uid "290A8B00-4D84-7CF9-7E21-A3B2FF9ED42C";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_03_Ctrl_rotateX";
 	rename -uid "9019CE9A-4511-60FA-6BAD-F5A2A9A8A127";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_03_Ctrl_rotateY";
 	rename -uid "31B9D039-4ADD-B7B8-85D1-8C912895DA90";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_05_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "0EA4D0E2-4DC2-A9EC-9EE4-92B44E942DEE";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -13.322297918952813;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -13.322297918952813 197 -13.322297918952813
+		 211 57.188972351657142;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_03_Ctrl_scaleX";
 	rename -uid "EE3711F2-4FE7-3A29-E878-71A2030694CD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_03_Ctrl_scaleY";
 	rename -uid "7FB09DBC-4A23-A317-75B1-AA9DA44B8F28";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_05_Knuckle_03_Ctrl_scaleZ";
 	rename -uid "4467A091-458C-E941-326D-36A61A0D8B06";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_03_Ctrl_visibility";
 	rename -uid "825029C3-4B36-92A0-878C-8485E7124059";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_02_Knuckle_03_Ctrl_translateX";
 	rename -uid "2B017EB6-4067-BE3D-2778-90B787831DB9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_03_Ctrl_translateY";
 	rename -uid "6A48614E-4708-A3D9-7380-67B1789276E8";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_03_Ctrl_translateZ";
 	rename -uid "746B663C-451E-E9DD-3049-1FBBC8CDA316";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateX";
 	rename -uid "69277CF0-4C98-030F-1929-FB9353EA9654";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateY";
 	rename -uid "E2489FA4-4113-7DEF-591A-D0A5951326D2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "9EE54C06-4788-DEA3-2BAD-7C86BDE4B369";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -13.322297918952813;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 -13.322297918952813 197 -13.322297918952813
+		 211 57.188972351657142;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_03_Ctrl_scaleX";
 	rename -uid "136C1575-4FFC-F49B-1447-76AA0DAA7BAD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_03_Ctrl_scaleY";
 	rename -uid "5A5BCFA4-4FE3-1786-71B9-DBAB175A0B6D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_03_Ctrl_scaleZ";
 	rename -uid "B4B5F983-47C8-E92E-C591-27ADCF518612";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Brow_Ctrl_visibility";
 	rename -uid "576119B8-4746-6AFF-F2CE-9AB54B2CC897";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Brow_Ctrl_translateX";
 	rename -uid "16586F74-49E5-8BDA-BF68-C1BD4A0A632A";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 -3;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Brow_Ctrl_translateY";
 	rename -uid "BFAA1325-4C58-8A33-B0AC-2095EA3678C7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Brow_Ctrl_translateZ";
 	rename -uid "1F0C5C6B-414E-91B4-38F8-588EF0301EF7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateX";
 	rename -uid "274E45C0-4EB1-D081-3E43-37BE9F1596AF";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateY";
 	rename -uid "9803ED59-4F23-A630-BA19-EBB7A5DE4AD6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 25;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateZ";
 	rename -uid "7FEF80A5-4455-3DED-B0EA-B0B0B4BBCDBB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Brow_Ctrl_scaleX";
 	rename -uid "6A570C8E-4CF5-F5A5-3188-1FB9F9BD6657";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Brow_Ctrl_scaleY";
 	rename -uid "6732D9F6-4CF5-D1C8-BCD5-8DABE2702DBD";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Brow_Ctrl_scaleZ";
 	rename -uid "0218574B-4C8B-2D8C-4826-75845622C46D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Leg_03_IK_Ctrl_visibility";
 	rename -uid "81E2B8C1-430B-8E76-4AA8-E59B2CEEBC17";
 	setAttr ".tan" 9;
@@ -4957,122 +5120,123 @@ createNode animCurveTU -n "R_Finger_02_Knuckle_02_Ctrl_visibility";
 	rename -uid "2C747BB7-45BA-BC0B-3BE2-FB9A9800F070";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "R_Finger_02_Knuckle_02_Ctrl_translateX";
 	rename -uid "5B8B846E-4F26-03A6-A5F6-44AEA30FE37D";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_02_Ctrl_translateY";
 	rename -uid "BAEC0370-4630-70B9-E02A-68AB72604A49";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "R_Finger_02_Knuckle_02_Ctrl_translateZ";
 	rename -uid "2C4A2560-46D6-0EF4-4B0C-44ACDBB98673";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateX";
 	rename -uid "4AA194A1-46C6-6E40-96E7-CB9E51F370B7";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateY";
 	rename -uid "9792264D-456B-7FAE-888E-DD84F017027E";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 197 0 211 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "089DFEC3-466F-517D-5C3C-EDA66257C767";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 21.822313300479209;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 21.822313300479209 197 21.822313300479209
+		 211 33.337083215879154;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_02_Ctrl_scaleX";
 	rename -uid "C87F123B-49A7-F6A7-CB61-F29C7D5619F2";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_02_Ctrl_scaleY";
 	rename -uid "B4C68BEA-470C-49AD-9301-3C99E17B02B1";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Finger_02_Knuckle_02_Ctrl_scaleZ";
 	rename -uid "1F7F2DB5-43E8-127C-4AA5-529176D3D65E";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 197 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Brow_Ctrl_visibility";
 	rename -uid "CE3F153F-489D-A89D-410B-38881B7A005A";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "L_Brow_Ctrl_translateX";
 	rename -uid "83695AF4-4537-AB7D-2B8A-FDB5143ABD4F";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 -5.8879621301706395;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "L_Brow_Ctrl_translateY";
 	rename -uid "ED7C6A29-4CF4-DF7E-0B78-80827BF3FF86";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTL -n "L_Brow_Ctrl_translateZ";
 	rename -uid "6AA41F15-4C87-426F-0BCF-2192E587B3CB";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateX";
 	rename -uid "1C414548-4EC9-67A2-02CF-24BD3DEA2BF0";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateY";
 	rename -uid "839D4DB2-49C7-D50A-1933-72898DE2D356";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 -25;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateZ";
 	rename -uid "A704CC59-44E2-67E9-6061-918B4BD5ED16";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 0 168 0 181 0;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Brow_Ctrl_scaleX";
 	rename -uid "344A150F-4E67-3A16-184F-7D87D8C41543";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Brow_Ctrl_scaleY";
 	rename -uid "946E6DB2-4AE0-0DEE-C4D0-F4B578FDDDD9";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "L_Brow_Ctrl_scaleZ";
 	rename -uid "AA6796C5-48DE-6880-0166-6CA57FA138E8";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  0 1 168 1 181 1;
+	setAttr -s 3 ".kot[0:2]"  5 16 16;
 createNode animCurveTU -n "R_Leg_01_IK_Ctrl_visibility";
 	rename -uid "17167FB6-44D3-D4DE-D5F9-53921FFF759F";
 	setAttr ".tan" 9;
@@ -5455,8 +5619,7 @@ createNode reference -n "cougarRN";
 		2 "|cougar:Render_Cam|cougar:Render_CamShape" "displayGateMask" " 1"
 		2 "|cougar:Render_Cam|cougar:Render_CamShape" "displayFilmGate" " 0"
 		2 "|cougar:Render_Cam|cougar:Render_CamShape" "displayResolution" " 1"
-		2 "|cougar:Cougar_Legs|cougar:Controls|cougar:Transform_Ctrl_Grp|cougar:Transform_Ctrl|cougar:Camera_Controls|cougar:Camera_Ctrl_Grp|cougar:Camera_Ctrl_Offset_Grp|cougar:Camera_Ctrl" 
-		"Operating_Space" " -k 1"
+		2 "cougar:Ctrl_Lyr" "visibility" " 0"
 		5 4 "cougarRN" "|cougar:Cougar_Legs|cougar:Controls|cougar:Transform_Ctrl_Grp|cougar:Transform_Ctrl.scaleX" 
 		"cougarRN.placeHolderList[1]" ""
 		5 4 "cougarRN" "|cougar:Cougar_Legs|cougar:Controls|cougar:Transform_Ctrl_Grp|cougar:Transform_Ctrl.scaleY" 
@@ -6160,28 +6323,28 @@ createNode animCurveTU -n "L_Leg_01_Ctrl_scaleZ";
 	setAttr ".ktv[0]"  0 1;
 createNode animLayer -n "BaseAnimation";
 	rename -uid "FF4F032E-4D61-6654-2368-E28E9D0B673F";
+	setAttr -s 2 ".cdly";
+	setAttr -s 2 ".chsl";
 	setAttr ".ovrd" yes;
 createNode animLayer -n "CougarBreathing";
 	rename -uid "D53C2BEE-4B20-AFEF-8860-D1AD29D61F63";
 	setAttr -s 11 ".dsm";
 	setAttr -s 9 ".bnds";
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 createNode animBlendNodeBoolean -n "Camera_Ctrl_visibility_CougarBreathing";
 	rename -uid "4A794B7E-4801-8443-D23F-888E4F07A2E6";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Camera_Ctrl_translateX_CougarBreathing";
 	rename -uid "9B0B7EFA-45C6-09A4-5BC8-348A3DC7C938";
-	setAttr ".o" 9.6450625264310474e-16;
+	setAttr ".o" -3.920475055707584e-16;
 createNode animBlendNodeAdditiveDL -n "Camera_Ctrl_translateY_CougarBreathing";
 	rename -uid "E2BBF3FF-4AE4-7E18-D4E0-0B8596F8F331";
-	setAttr ".o" -0.00084946152212417303;
+	setAttr ".o" -0.9264562370827466;
 createNode animBlendNodeAdditiveDL -n "Camera_Ctrl_translateZ_CougarBreathing";
 	rename -uid "AF07F49B-45A6-CE06-80A5-E992FD08E4B4";
-	setAttr ".o" 2.8033131371785203e-14;
+	setAttr ".o" 1.9428902930940239e-16;
 createNode animBlendNodeAdditiveRotation -n "Camera_Ctrl_rotate_CougarBreathing";
 	rename -uid "41DF679B-452C-68B7-F72A-94A2A2228C7E";
-	setAttr ".o" -type "double3" -8.5841377734303936 0 0 ;
+	setAttr ".o" -type "double3" 0.30888343064108187 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Camera_Ctrl_scaleX_CougarBreathing";
 	rename -uid "274E54DA-416E-E6BB-1EE6-D893DDC54A10";
 	setAttr ".o" 1;
@@ -6295,17 +6458,406 @@ createNode animCurveTU -n "Camera_Ctrl_Operating_Space_CougarBreathing_inputB";
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
+createNode animCurveTL -n "L_Eye_Ctrl_translateX";
+	rename -uid "C03A1C8E-4689-07F0-082D-C98C631771D5";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 3.8524738954492932e-14 179 0
+		 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTL -n "L_Eye_Ctrl_translateY";
+	rename -uid "2F07A45D-4FE3-EC86-2C09-08BAD27F9594";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 -2.2093438190040615e-14 179 0
+		 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTL -n "L_Eye_Ctrl_translateZ";
+	rename -uid "52FB982B-4E1F-DBD7-6B5F-27BB9CE33876";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 2.6491767113212776 179 2.6491767113212776
+		 199 1.2;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTL -n "R_Eye_Ctrl_translateX";
+	rename -uid "EDCB0182-4881-AED5-ED79-008721D55B26";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 3.8524738954492932e-14 179 0
+		 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTL -n "R_Eye_Ctrl_translateY";
+	rename -uid "9F1DBECA-48FF-9501-4927-0CB2A83FB6C2";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 -2.2093438190040615e-14 179 0
+		 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTL -n "R_Eye_Ctrl_translateZ";
+	rename -uid "323003E6-4239-F19E-C8B0-2F86A5461F20";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 2.6491767113212776 179 2.6491767113212776
+		 199 1.2;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTU -n "R_Eye_Ctrl_visibility";
+	rename -uid "A660A612-4295-5B81-5067-E7ABF9BA879A";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[0:4]"  9 9 1 9 9;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+createNode animCurveTA -n "R_Eye_Ctrl_rotateX";
+	rename -uid "36465FEC-414B-84D7-D299-4C98987DA7CA";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTA -n "R_Eye_Ctrl_rotateY";
+	rename -uid "C697971A-458B-7CDA-E335-7CBFB98D90AA";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTA -n "R_Eye_Ctrl_rotateZ";
+	rename -uid "67FB674E-4EB3-5BD2-5D66-5E881168BFF5";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTU -n "R_Eye_Ctrl_scaleX";
+	rename -uid "3AA7CF7D-48CC-7FDD-9F68-1EB911F321BD";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTU -n "R_Eye_Ctrl_scaleY";
+	rename -uid "93CAE3E7-4516-3CB7-5B48-588D0CAE9724";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTU -n "R_Eye_Ctrl_scaleZ";
+	rename -uid "436B9961-4891-E120-839E-50A2533E4F00";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 16 16;
+	setAttr -s 5 ".kot[2:4]"  1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
+createNode animCurveTU -n "L_Eye_Ctrl_visibility";
+	rename -uid "C59A0301-447B-96B3-1596-4681FDD0150B";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[0:4]"  9 9 1 1 9;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+createNode animCurveTA -n "L_Eye_Ctrl_rotateX";
+	rename -uid "4B9C2D6F-4533-5F7F-17FC-63A4EBC48FD7";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTA -n "L_Eye_Ctrl_rotateY";
+	rename -uid "CAFE226D-4E02-BDA5-4E76-BF977E8E9BD4";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTA -n "L_Eye_Ctrl_rotateZ";
+	rename -uid "08E7B8D4-44F2-A8AE-7D37-B9BAC68599ED";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 150 0 176 0 179 0 199 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTU -n "L_Eye_Ctrl_scaleX";
+	rename -uid "FDBCECF4-4F44-563B-8249-14BE30CD128E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTU -n "L_Eye_Ctrl_scaleY";
+	rename -uid "BDBEB575-4099-4D9E-06B8-E2AE885F89CD";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animCurveTU -n "L_Eye_Ctrl_scaleZ";
+	rename -uid "C95C2FEB-4E40-1376-5E86-2682B6DE64FA";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 150 1 176 1 179 1 199 1;
+	setAttr -s 5 ".kit[2:4]"  1 1 16;
+	setAttr -s 5 ".kot[1:4]"  1 1 16 16;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
+createNode animLayer -n "FearQuaking";
+	rename -uid "A249C917-4C36-A5CE-EBA0-A8BCDCE0A54E";
+	setAttr -s 22 ".dsm";
+	setAttr -s 18 ".bnds";
+	setAttr ".pref" yes;
+	setAttr ".slct" yes;
+createNode animBlendNodeBoolean -n "Neck_Ctrl_visibility_FearQuaking";
+	rename -uid "26A8B68F-4CB2-2EF1-3DEF-D6B5A13453A9";
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateX_FearQuaking";
+	rename -uid "247B0001-445A-A03B-86B8-2FA3F89EB147";
+createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateY_FearQuaking";
+	rename -uid "631F43FB-4A8A-5DEA-A6A1-BCBAD584C3DC";
+createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateZ_FearQuaking";
+	rename -uid "C5CF7733-4C4B-AB5F-8E1E-C589EEC10FCE";
+createNode animBlendNodeAdditiveRotation -n "Neck_Ctrl_rotate_FearQuaking";
+	rename -uid "C83C6AA3-4502-03EC-0BE6-D7A2F7480509";
+	setAttr ".o" -type "double3" -22.347479897597971 -2.3365802010015648 -5.2068523838499248 ;
+createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleX_FearQuaking";
+	rename -uid "28D1DC29-4CF2-77F3-2B9F-198A9E7E6E36";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleY_FearQuaking";
+	rename -uid "11F34437-46F2-2433-1DA9-598352A1C7E3";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleZ_FearQuaking";
+	rename -uid "A2052422-46A1-9385-1BEF-329CCB5414EE";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "Neck_Ctrl_Follow_Translate_FearQuaking";
+	rename -uid "8A0B772D-4209-DEBC-23EF-19917119569F";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "Neck_Ctrl_Follow_Rotate_FearQuaking";
+	rename -uid "DE3482AE-4D25-5BB6-27C7-15B5D961BD04";
+	setAttr ".o" 1;
+createNode animBlendNodeBoolean -n "R_Arm_03_FK_Ctrl_visibility_FearQuaking";
+	rename -uid "EF91B962-4682-05E7-D106-2A80BD9AF49C";
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "R_Arm_03_FK_Ctrl_translateX_FearQuaking";
+	rename -uid "738D23FC-44A5-B914-BBBF-FBBD1326B59B";
+createNode animBlendNodeAdditiveDL -n "R_Arm_03_FK_Ctrl_translateY_FearQuaking";
+	rename -uid "F970CC34-4DB5-7513-E961-8D9A6E368999";
+createNode animBlendNodeAdditiveDL -n "R_Arm_03_FK_Ctrl_translateZ_FearQuaking";
+	rename -uid "961C962B-4EE8-5863-FEDF-79BD7FAE7CD8";
+createNode animBlendNodeAdditiveRotation -n "R_Arm_03_FK_Ctrl_rotate_FearQuaking";
+	rename -uid "FF8018AA-400C-BD18-1F93-54967E5B3C3A";
+	setAttr ".o" -type "double3" 30.311620023141554 -58.156780512941744 -15.06863931045417 ;
+createNode animBlendNodeAdditiveScale -n "R_Arm_03_FK_Ctrl_scaleX_FearQuaking";
+	rename -uid "2F7E7F6D-4B10-1886-349D-B6ABF3BEA71C";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "R_Arm_03_FK_Ctrl_scaleY_FearQuaking";
+	rename -uid "B8CFD036-4E2D-CF0F-AF7E-E585B13D0F34";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking";
+	rename -uid "89337A95-45BF-BD57-702E-AFB194886E89";
+	setAttr ".o" 1;
+createNode animCurveTU -n "Neck_Ctrl_visibility_FearQuaking_inputB";
+	rename -uid "7B6BC32E-4BB9-1A90-71CA-25A75F48183A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 1 192 1 194 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTL -n "Neck_Ctrl_translateX_FearQuaking_inputB";
+	rename -uid "47E44C3C-4DE5-C45E-E4E3-16A0C3A32182";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTL -n "Neck_Ctrl_translateY_FearQuaking_inputB";
+	rename -uid "E8678319-4984-C73C-B93B-A5B4E1C46992";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTL -n "Neck_Ctrl_translateZ_FearQuaking_inputB";
+	rename -uid "58318D85-40A0-9815-CF3E-BD84E31B2E2B";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTA -n "Neck_Ctrl_rotate_FearQuaking_inputBX";
+	rename -uid "321816D8-42A2-F4B2-9CD6-AAB12B353368";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 -1 194 9.3162327850944199e-07;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Neck_Ctrl_rotate_FearQuaking_inputBY";
+	rename -uid "E25538E9-4B9B-00E2-80D9-5CB44951CCBC";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTA -n "Neck_Ctrl_rotate_FearQuaking_inputBZ";
+	rename -uid "44262613-414E-EF3C-3B88-0EAA90989E0C";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTU -n "Neck_Ctrl_scaleX_FearQuaking_inputB";
+	rename -uid "35240C31-4FD4-E6C9-6D58-E9B0BF56A7A7";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 1 192 1 194 1;
+createNode animCurveTU -n "Neck_Ctrl_scaleY_FearQuaking_inputB";
+	rename -uid "BE60174E-4E16-C876-C455-F1A09B9A5218";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 1 192 1 194 1;
+createNode animCurveTU -n "Neck_Ctrl_scaleZ_FearQuaking_inputB";
+	rename -uid "376048B4-46D6-BF61-7389-67A5DDD00880";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 1 192 1 194 1;
+createNode animCurveTU -n "Neck_Ctrl_Follow_Translate_FearQuaking_inputB";
+	rename -uid "6EBC9D8A-4A8A-E17F-B6B1-ECBE1D6C5AF3";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTU -n "Neck_Ctrl_Follow_Rotate_FearQuaking_inputB";
+	rename -uid "B5799A12-471C-F601-83B0-1E8661F286F3";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  190 0 192 0 194 0;
+createNode animCurveTU -n "R_Arm_03_FK_Ctrl_visibility_FearQuaking_inputB";
+	rename -uid "BC740381-48B4-AE75-54A5-83B86FF54BE7";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 211 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateX_FearQuaking_inputB";
+	rename -uid "9570F6A0-4D27-0280-5A71-EC8B3279BDC7";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 211 0;
+createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateY_FearQuaking_inputB";
+	rename -uid "ACF4DCF5-47D8-EE63-BB19-44BEB97FFB57";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 211 0;
+createNode animCurveTL -n "R_Arm_03_FK_Ctrl_translateZ_FearQuaking_inputB";
+	rename -uid "CA01365F-46F7-0DDF-2079-D09F06259290";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 211 0;
+createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBX";
+	rename -uid "F9AE2587-4842-8E54-EB9C-738A915C349E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 1.9999995221808966 211 -1.4908390161153296e-07;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBY";
+	rename -uid "0BFD974D-4B5A-F74C-794F-29A374C1B031";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 211 0;
+createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBZ";
+	rename -uid "4AB1149B-4CC8-622A-0A4A-F8874FAADD60";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 0 209 0 211 0;
+createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleX_FearQuaking_inputB";
+	rename -uid "9257B223-4275-8C8B-4E3B-6380231D9D3F";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 211 1;
+createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleY_FearQuaking_inputB";
+	rename -uid "6A92B38C-41A6-1D0C-5CA3-B49ADDAF07E5";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 211 1;
+createNode animCurveTU -n "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking_inputB";
+	rename -uid "500E3B44-4429-BE47-CDB1-DB8BD801201E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  207 1 209 1 211 1;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0539ECE7-4798-E29D-4384-3A98ED3F0BF6";
+	rename -uid "EC58A4FF-4E13-407C-B828-96B08EC7D0B0";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 81;
-	setAttr ".unw" 81;
+	setAttr ".o" 196;
+	setAttr ".unw" 196;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
@@ -6409,503 +6961,547 @@ connectAttr "Chest_Ctrl_scaleX.o" "GuyRN.phl[51]";
 connectAttr "Chest_Ctrl_scaleY.o" "GuyRN.phl[52]";
 connectAttr "Chest_Ctrl_scaleZ.o" "GuyRN.phl[53]";
 connectAttr "Chest_Ctrl_visibility.o" "GuyRN.phl[54]";
-connectAttr "Neck_Ctrl_Follow_Translate.o" "GuyRN.phl[55]";
-connectAttr "Neck_Ctrl_Follow_Rotate.o" "GuyRN.phl[56]";
-connectAttr "Neck_Ctrl_translateX.o" "GuyRN.phl[57]";
-connectAttr "Neck_Ctrl_translateY.o" "GuyRN.phl[58]";
-connectAttr "Neck_Ctrl_translateZ.o" "GuyRN.phl[59]";
-connectAttr "Neck_Ctrl_rotateX.o" "GuyRN.phl[60]";
-connectAttr "Neck_Ctrl_rotateY.o" "GuyRN.phl[61]";
-connectAttr "Neck_Ctrl_rotateZ.o" "GuyRN.phl[62]";
-connectAttr "Neck_Ctrl_scaleX.o" "GuyRN.phl[63]";
-connectAttr "Neck_Ctrl_scaleY.o" "GuyRN.phl[64]";
-connectAttr "Neck_Ctrl_scaleZ.o" "GuyRN.phl[65]";
-connectAttr "Neck_Ctrl_visibility.o" "GuyRN.phl[66]";
-connectAttr "Head_Ctrl_Follow_Translate.o" "GuyRN.phl[67]";
-connectAttr "Head_Ctrl_Follow_Rotate.o" "GuyRN.phl[68]";
-connectAttr "Head_Ctrl_translateX.o" "GuyRN.phl[69]";
-connectAttr "Head_Ctrl_translateY.o" "GuyRN.phl[70]";
-connectAttr "Head_Ctrl_translateZ.o" "GuyRN.phl[71]";
-connectAttr "Head_Ctrl_rotateX.o" "GuyRN.phl[72]";
-connectAttr "Head_Ctrl_rotateY.o" "GuyRN.phl[73]";
-connectAttr "Head_Ctrl_rotateZ.o" "GuyRN.phl[74]";
-connectAttr "Head_Ctrl_scaleX.o" "GuyRN.phl[75]";
-connectAttr "Head_Ctrl_scaleY.o" "GuyRN.phl[76]";
-connectAttr "Head_Ctrl_scaleZ.o" "GuyRN.phl[77]";
-connectAttr "Head_Ctrl_visibility.o" "GuyRN.phl[78]";
-connectAttr "L_Brow_Ctrl_translateX.o" "GuyRN.phl[79]";
-connectAttr "L_Brow_Ctrl_translateY.o" "GuyRN.phl[80]";
-connectAttr "L_Brow_Ctrl_translateZ.o" "GuyRN.phl[81]";
-connectAttr "L_Brow_Ctrl_rotateX.o" "GuyRN.phl[82]";
-connectAttr "L_Brow_Ctrl_rotateY.o" "GuyRN.phl[83]";
-connectAttr "L_Brow_Ctrl_rotateZ.o" "GuyRN.phl[84]";
-connectAttr "L_Brow_Ctrl_scaleX.o" "GuyRN.phl[85]";
-connectAttr "L_Brow_Ctrl_scaleY.o" "GuyRN.phl[86]";
-connectAttr "L_Brow_Ctrl_scaleZ.o" "GuyRN.phl[87]";
-connectAttr "L_Brow_Ctrl_visibility.o" "GuyRN.phl[88]";
-connectAttr "R_Brow_Ctrl_translateX.o" "GuyRN.phl[89]";
-connectAttr "R_Brow_Ctrl_translateY.o" "GuyRN.phl[90]";
-connectAttr "R_Brow_Ctrl_translateZ.o" "GuyRN.phl[91]";
-connectAttr "R_Brow_Ctrl_rotateX.o" "GuyRN.phl[92]";
-connectAttr "R_Brow_Ctrl_rotateY.o" "GuyRN.phl[93]";
-connectAttr "R_Brow_Ctrl_rotateZ.o" "GuyRN.phl[94]";
-connectAttr "R_Brow_Ctrl_scaleX.o" "GuyRN.phl[95]";
-connectAttr "R_Brow_Ctrl_scaleY.o" "GuyRN.phl[96]";
-connectAttr "R_Brow_Ctrl_scaleZ.o" "GuyRN.phl[97]";
-connectAttr "R_Brow_Ctrl_visibility.o" "GuyRN.phl[98]";
-connectAttr "L_Arm_01_IK_Ctrl_translateX.o" "GuyRN.phl[99]";
-connectAttr "L_Arm_01_IK_Ctrl_translateY.o" "GuyRN.phl[100]";
-connectAttr "L_Arm_01_IK_Ctrl_translateZ.o" "GuyRN.phl[101]";
-connectAttr "L_Arm_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[102]";
-connectAttr "L_Arm_01_IK_Ctrl_visibility.o" "GuyRN.phl[103]";
-connectAttr "L_Arm_01_IK_Ctrl_rotateX.o" "GuyRN.phl[104]";
-connectAttr "L_Arm_01_IK_Ctrl_rotateY.o" "GuyRN.phl[105]";
-connectAttr "L_Arm_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[106]";
-connectAttr "L_Arm_01_IK_Ctrl_scaleX.o" "GuyRN.phl[107]";
-connectAttr "L_Arm_01_IK_Ctrl_scaleY.o" "GuyRN.phl[108]";
-connectAttr "L_Arm_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[109]";
-connectAttr "L_Arm_03_IK_Ctrl_rotateY.o" "GuyRN.phl[110]";
-connectAttr "L_Arm_03_IK_Ctrl_rotateX.o" "GuyRN.phl[111]";
-connectAttr "L_Arm_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[112]";
-connectAttr "L_Arm_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[113]";
-connectAttr "L_Arm_03_IK_Ctrl_translateX.o" "GuyRN.phl[114]";
-connectAttr "L_Arm_03_IK_Ctrl_translateY.o" "GuyRN.phl[115]";
-connectAttr "L_Arm_03_IK_Ctrl_translateZ.o" "GuyRN.phl[116]";
-connectAttr "L_Arm_03_IK_Ctrl_visibility.o" "GuyRN.phl[117]";
-connectAttr "L_Arm_03_IK_Ctrl_scaleX.o" "GuyRN.phl[118]";
-connectAttr "L_Arm_03_IK_Ctrl_scaleY.o" "GuyRN.phl[119]";
-connectAttr "L_Arm_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[120]";
-connectAttr "L_Arm_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[121]";
-connectAttr "L_Arm_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[122]";
-connectAttr "L_Arm_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[123]";
-connectAttr "L_Arm_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[124]";
-connectAttr "L_Arm_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[125]";
-connectAttr "L_Arm_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[126]";
-connectAttr "L_Arm_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[127]";
-connectAttr "L_Arm_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[128]";
-connectAttr "L_Arm_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[129]";
-connectAttr "L_Arm_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[130]";
-connectAttr "L_Arm_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[131]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[132]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[133]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[134]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[135]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[136]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[137]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[138]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[139]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[140]";
-connectAttr "L_Finger_01_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[141]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[142]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[143]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[144]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[145]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[146]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[147]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[148]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[149]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[150]";
-connectAttr "L_Finger_01_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[151]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[152]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[153]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[154]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[155]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[156]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[157]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[158]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[159]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[160]";
-connectAttr "L_Finger_02_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[161]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[162]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[163]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[164]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[165]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[166]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[167]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[168]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[169]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[170]";
-connectAttr "L_Finger_02_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[171]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[172]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[173]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[174]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[175]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[176]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[177]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[178]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[179]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[180]";
-connectAttr "L_Finger_02_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[181]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[182]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[183]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[184]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[185]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[186]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[187]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[188]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[189]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[190]";
-connectAttr "L_Finger_03_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[191]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[192]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[193]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[194]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[195]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[196]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[197]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[198]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[199]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[200]";
-connectAttr "L_Finger_03_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[201]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[202]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[203]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[204]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[205]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[206]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[207]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[208]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[209]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[210]";
-connectAttr "L_Finger_03_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[211]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[212]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[213]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[214]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[215]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[216]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[217]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[218]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[219]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[220]";
-connectAttr "L_Finger_04_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[221]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[222]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[223]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[224]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[225]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[226]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[227]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[228]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[229]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[230]";
-connectAttr "L_Finger_04_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[231]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[232]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[233]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[234]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[235]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[236]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[237]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[238]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[239]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[240]";
-connectAttr "L_Finger_04_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[241]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[242]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[243]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[244]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[245]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[246]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[247]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[248]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[249]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[250]";
-connectAttr "L_Finger_05_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[251]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[252]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[253]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[254]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[255]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[256]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[257]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[258]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[259]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[260]";
-connectAttr "L_Finger_05_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[261]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[262]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[263]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[264]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[265]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[266]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[267]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[268]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[269]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[270]";
-connectAttr "L_Finger_05_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[271]";
-connectAttr "R_Arm_01_FK_Ctrl_translateX.o" "GuyRN.phl[272]";
-connectAttr "R_Arm_01_FK_Ctrl_translateY.o" "GuyRN.phl[273]";
-connectAttr "R_Arm_01_FK_Ctrl_translateZ.o" "GuyRN.phl[274]";
-connectAttr "R_Arm_01_FK_Ctrl_rotateZ.o" "GuyRN.phl[275]";
-connectAttr "R_Arm_01_FK_Ctrl_rotateX.o" "GuyRN.phl[276]";
-connectAttr "R_Arm_01_FK_Ctrl_rotateY.o" "GuyRN.phl[277]";
-connectAttr "R_Arm_01_FK_Ctrl_scaleX.o" "GuyRN.phl[278]";
-connectAttr "R_Arm_01_FK_Ctrl_scaleY.o" "GuyRN.phl[279]";
-connectAttr "R_Arm_01_FK_Ctrl_scaleZ.o" "GuyRN.phl[280]";
-connectAttr "R_Arm_01_FK_Ctrl_visibility.o" "GuyRN.phl[281]";
-connectAttr "R_Arm_02_FK_Ctrl_translateX.o" "GuyRN.phl[282]";
-connectAttr "R_Arm_02_FK_Ctrl_translateY.o" "GuyRN.phl[283]";
-connectAttr "R_Arm_02_FK_Ctrl_translateZ.o" "GuyRN.phl[284]";
-connectAttr "R_Arm_02_FK_Ctrl_rotateZ.o" "GuyRN.phl[285]";
-connectAttr "R_Arm_02_FK_Ctrl_rotateX.o" "GuyRN.phl[286]";
-connectAttr "R_Arm_02_FK_Ctrl_rotateY.o" "GuyRN.phl[287]";
-connectAttr "R_Arm_02_FK_Ctrl_scaleX.o" "GuyRN.phl[288]";
-connectAttr "R_Arm_02_FK_Ctrl_scaleY.o" "GuyRN.phl[289]";
-connectAttr "R_Arm_02_FK_Ctrl_scaleZ.o" "GuyRN.phl[290]";
-connectAttr "R_Arm_02_FK_Ctrl_visibility.o" "GuyRN.phl[291]";
-connectAttr "R_Arm_03_FK_Ctrl_translateX.o" "GuyRN.phl[292]";
-connectAttr "R_Arm_03_FK_Ctrl_translateY.o" "GuyRN.phl[293]";
-connectAttr "R_Arm_03_FK_Ctrl_translateZ.o" "GuyRN.phl[294]";
-connectAttr "R_Arm_03_FK_Ctrl_rotateY.o" "GuyRN.phl[295]";
-connectAttr "R_Arm_03_FK_Ctrl_rotateX.o" "GuyRN.phl[296]";
-connectAttr "R_Arm_03_FK_Ctrl_rotateZ.o" "GuyRN.phl[297]";
-connectAttr "R_Arm_03_FK_Ctrl_scaleX.o" "GuyRN.phl[298]";
-connectAttr "R_Arm_03_FK_Ctrl_scaleY.o" "GuyRN.phl[299]";
-connectAttr "R_Arm_03_FK_Ctrl_scaleZ.o" "GuyRN.phl[300]";
-connectAttr "R_Arm_03_FK_Ctrl_visibility.o" "GuyRN.phl[301]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[302]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[303]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[304]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[305]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[306]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[307]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[308]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[309]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[310]";
-connectAttr "R_Finger_01_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[311]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[312]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[313]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[314]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[315]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[316]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[317]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[318]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[319]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[320]";
-connectAttr "R_Finger_01_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[321]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[322]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[323]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[324]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[325]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[326]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[327]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[328]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[329]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[330]";
-connectAttr "R_Finger_02_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[331]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[332]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[333]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[334]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[335]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[336]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[337]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[338]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[339]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[340]";
-connectAttr "R_Finger_02_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[341]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[342]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[343]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[344]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[345]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[346]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[347]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[348]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[349]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[350]";
-connectAttr "R_Finger_02_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[351]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[352]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[353]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[354]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[355]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[356]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[357]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[358]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[359]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[360]";
-connectAttr "R_Finger_03_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[361]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[362]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[363]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[364]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[365]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[366]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[367]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[368]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[369]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[370]";
-connectAttr "R_Finger_03_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[371]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[372]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[373]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[374]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[375]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[376]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[377]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[378]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[379]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[380]";
-connectAttr "R_Finger_03_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[381]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[382]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[383]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[384]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[385]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[386]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[387]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[388]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[389]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[390]";
-connectAttr "R_Finger_04_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[391]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[392]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[393]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[394]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[395]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[396]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[397]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[398]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[399]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[400]";
-connectAttr "R_Finger_04_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[401]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[402]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[403]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[404]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[405]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[406]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[407]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[408]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[409]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[410]";
-connectAttr "R_Finger_04_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[411]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[412]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[413]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[414]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[415]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[416]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[417]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[418]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[419]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[420]";
-connectAttr "R_Finger_05_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[421]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[422]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[423]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[424]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[425]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[426]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[427]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[428]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[429]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[430]";
-connectAttr "R_Finger_05_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[431]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[432]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[433]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[434]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[435]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[436]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[437]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[438]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[439]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[440]";
-connectAttr "R_Finger_05_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[441]";
-connectAttr "L_Leg_01_IK_Ctrl_translateX.o" "GuyRN.phl[442]";
-connectAttr "L_Leg_01_IK_Ctrl_translateY.o" "GuyRN.phl[443]";
-connectAttr "L_Leg_01_IK_Ctrl_translateZ.o" "GuyRN.phl[444]";
-connectAttr "L_Leg_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[445]";
-connectAttr "L_Leg_01_IK_Ctrl_visibility.o" "GuyRN.phl[446]";
-connectAttr "L_Leg_01_IK_Ctrl_rotateX.o" "GuyRN.phl[447]";
-connectAttr "L_Leg_01_IK_Ctrl_rotateY.o" "GuyRN.phl[448]";
-connectAttr "L_Leg_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[449]";
-connectAttr "L_Leg_01_IK_Ctrl_scaleX.o" "GuyRN.phl[450]";
-connectAttr "L_Leg_01_IK_Ctrl_scaleY.o" "GuyRN.phl[451]";
-connectAttr "L_Leg_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[452]";
-connectAttr "L_Leg_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[453]";
-connectAttr "L_Leg_03_IK_Ctrl_rotateY.o" "GuyRN.phl[454]";
-connectAttr "L_Leg_03_IK_Ctrl_rotateX.o" "GuyRN.phl[455]";
-connectAttr "L_Leg_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[456]";
-connectAttr "L_Leg_03_IK_Ctrl_translateX.o" "GuyRN.phl[457]";
-connectAttr "L_Leg_03_IK_Ctrl_translateY.o" "GuyRN.phl[458]";
-connectAttr "L_Leg_03_IK_Ctrl_translateZ.o" "GuyRN.phl[459]";
-connectAttr "L_Leg_03_IK_Ctrl_visibility.o" "GuyRN.phl[460]";
-connectAttr "L_Leg_03_IK_Ctrl_scaleX.o" "GuyRN.phl[461]";
-connectAttr "L_Leg_03_IK_Ctrl_scaleY.o" "GuyRN.phl[462]";
-connectAttr "L_Leg_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[463]";
-connectAttr "L_Leg_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[464]";
-connectAttr "L_Leg_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[465]";
-connectAttr "L_Leg_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[466]";
-connectAttr "L_Leg_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[467]";
-connectAttr "L_Leg_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[468]";
-connectAttr "L_Leg_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[469]";
-connectAttr "L_Leg_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[470]";
-connectAttr "L_Leg_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[471]";
-connectAttr "L_Leg_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[472]";
-connectAttr "L_Leg_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[473]";
-connectAttr "L_Leg_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[474]";
-connectAttr "R_Leg_01_IK_Ctrl_translateX.o" "GuyRN.phl[475]";
-connectAttr "R_Leg_01_IK_Ctrl_translateY.o" "GuyRN.phl[476]";
-connectAttr "R_Leg_01_IK_Ctrl_translateZ.o" "GuyRN.phl[477]";
-connectAttr "R_Leg_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[478]";
-connectAttr "R_Leg_01_IK_Ctrl_visibility.o" "GuyRN.phl[479]";
-connectAttr "R_Leg_01_IK_Ctrl_rotateX.o" "GuyRN.phl[480]";
-connectAttr "R_Leg_01_IK_Ctrl_rotateY.o" "GuyRN.phl[481]";
-connectAttr "R_Leg_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[482]";
-connectAttr "R_Leg_01_IK_Ctrl_scaleX.o" "GuyRN.phl[483]";
-connectAttr "R_Leg_01_IK_Ctrl_scaleY.o" "GuyRN.phl[484]";
-connectAttr "R_Leg_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[485]";
-connectAttr "R_Leg_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[486]";
-connectAttr "R_Leg_03_IK_Ctrl_rotateX.o" "GuyRN.phl[487]";
-connectAttr "R_Leg_03_IK_Ctrl_rotateY.o" "GuyRN.phl[488]";
-connectAttr "R_Leg_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[489]";
-connectAttr "R_Leg_03_IK_Ctrl_translateX.o" "GuyRN.phl[490]";
-connectAttr "R_Leg_03_IK_Ctrl_translateZ.o" "GuyRN.phl[491]";
-connectAttr "R_Leg_03_IK_Ctrl_translateY.o" "GuyRN.phl[492]";
-connectAttr "R_Leg_03_IK_Ctrl_visibility.o" "GuyRN.phl[493]";
-connectAttr "R_Leg_03_IK_Ctrl_scaleX.o" "GuyRN.phl[494]";
-connectAttr "R_Leg_03_IK_Ctrl_scaleY.o" "GuyRN.phl[495]";
-connectAttr "R_Leg_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[496]";
-connectAttr "R_Leg_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[497]";
-connectAttr "R_Leg_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[498]";
-connectAttr "R_Leg_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[499]";
-connectAttr "R_Leg_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[500]";
-connectAttr "R_Leg_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[501]";
-connectAttr "R_Leg_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[502]";
-connectAttr "R_Leg_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[503]";
-connectAttr "R_Leg_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[504]";
-connectAttr "R_Leg_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[505]";
-connectAttr "R_Leg_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[506]";
-connectAttr "R_Leg_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[507]";
-connectAttr "L_Arm_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[508]";
-connectAttr "L_Arm_IKFK_Ctrl_visibility.o" "GuyRN.phl[509]";
-connectAttr "L_Arm_IKFK_Ctrl_translateX.o" "GuyRN.phl[510]";
-connectAttr "L_Arm_IKFK_Ctrl_translateY.o" "GuyRN.phl[511]";
-connectAttr "L_Arm_IKFK_Ctrl_translateZ.o" "GuyRN.phl[512]";
-connectAttr "L_Arm_IKFK_Ctrl_rotateX.o" "GuyRN.phl[513]";
-connectAttr "L_Arm_IKFK_Ctrl_rotateY.o" "GuyRN.phl[514]";
-connectAttr "L_Arm_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[515]";
-connectAttr "L_Arm_IKFK_Ctrl_scaleX.o" "GuyRN.phl[516]";
-connectAttr "L_Arm_IKFK_Ctrl_scaleY.o" "GuyRN.phl[517]";
-connectAttr "L_Arm_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[518]";
-connectAttr "R_Arm_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[519]";
-connectAttr "R_Arm_IKFK_Ctrl_visibility.o" "GuyRN.phl[520]";
-connectAttr "R_Arm_IKFK_Ctrl_translateX.o" "GuyRN.phl[521]";
-connectAttr "R_Arm_IKFK_Ctrl_translateY.o" "GuyRN.phl[522]";
-connectAttr "R_Arm_IKFK_Ctrl_translateZ.o" "GuyRN.phl[523]";
-connectAttr "R_Arm_IKFK_Ctrl_rotateX.o" "GuyRN.phl[524]";
-connectAttr "R_Arm_IKFK_Ctrl_rotateY.o" "GuyRN.phl[525]";
-connectAttr "R_Arm_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[526]";
-connectAttr "R_Arm_IKFK_Ctrl_scaleX.o" "GuyRN.phl[527]";
-connectAttr "R_Arm_IKFK_Ctrl_scaleY.o" "GuyRN.phl[528]";
-connectAttr "R_Arm_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[529]";
-connectAttr "L_Leg_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[530]";
-connectAttr "L_Leg_IKFK_Ctrl_visibility.o" "GuyRN.phl[531]";
-connectAttr "L_Leg_IKFK_Ctrl_translateX.o" "GuyRN.phl[532]";
-connectAttr "L_Leg_IKFK_Ctrl_translateY.o" "GuyRN.phl[533]";
-connectAttr "L_Leg_IKFK_Ctrl_translateZ.o" "GuyRN.phl[534]";
-connectAttr "L_Leg_IKFK_Ctrl_rotateX.o" "GuyRN.phl[535]";
-connectAttr "L_Leg_IKFK_Ctrl_rotateY.o" "GuyRN.phl[536]";
-connectAttr "L_Leg_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[537]";
-connectAttr "L_Leg_IKFK_Ctrl_scaleX.o" "GuyRN.phl[538]";
-connectAttr "L_Leg_IKFK_Ctrl_scaleY.o" "GuyRN.phl[539]";
-connectAttr "L_Leg_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[540]";
-connectAttr "R_Leg_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[541]";
-connectAttr "R_Leg_IKFK_Ctrl_visibility.o" "GuyRN.phl[542]";
-connectAttr "R_Leg_IKFK_Ctrl_translateX.o" "GuyRN.phl[543]";
-connectAttr "R_Leg_IKFK_Ctrl_translateY.o" "GuyRN.phl[544]";
-connectAttr "R_Leg_IKFK_Ctrl_translateZ.o" "GuyRN.phl[545]";
-connectAttr "R_Leg_IKFK_Ctrl_rotateX.o" "GuyRN.phl[546]";
-connectAttr "R_Leg_IKFK_Ctrl_rotateY.o" "GuyRN.phl[547]";
-connectAttr "R_Leg_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[548]";
-connectAttr "R_Leg_IKFK_Ctrl_scaleX.o" "GuyRN.phl[549]";
-connectAttr "R_Leg_IKFK_Ctrl_scaleY.o" "GuyRN.phl[550]";
-connectAttr "R_Leg_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[551]";
+connectAttr "GuyRN.phl[55]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_Follow_Translate_FearQuaking.o" "GuyRN.phl[56]";
+connectAttr "GuyRN.phl[57]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_Follow_Rotate_FearQuaking.o" "GuyRN.phl[58]";
+connectAttr "GuyRN.phl[59]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_translateX_FearQuaking.o" "GuyRN.phl[60]";
+connectAttr "GuyRN.phl[61]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_translateY_FearQuaking.o" "GuyRN.phl[62]";
+connectAttr "GuyRN.phl[63]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_translateZ_FearQuaking.o" "GuyRN.phl[64]";
+connectAttr "GuyRN.phl[65]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_rotate_FearQuaking.ox" "GuyRN.phl[66]";
+connectAttr "GuyRN.phl[67]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_rotate_FearQuaking.oy" "GuyRN.phl[68]";
+connectAttr "GuyRN.phl[69]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_rotate_FearQuaking.oz" "GuyRN.phl[70]";
+connectAttr "GuyRN.phl[71]" "Neck_Ctrl_rotate_FearQuaking.ro";
+connectAttr "GuyRN.phl[72]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_scaleX_FearQuaking.o" "GuyRN.phl[73]";
+connectAttr "GuyRN.phl[74]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_scaleY_FearQuaking.o" "GuyRN.phl[75]";
+connectAttr "GuyRN.phl[76]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_scaleZ_FearQuaking.o" "GuyRN.phl[77]";
+connectAttr "GuyRN.phl[78]" "FearQuaking.dsm" -na;
+connectAttr "Neck_Ctrl_visibility_FearQuaking.o" "GuyRN.phl[79]";
+connectAttr "Head_Ctrl_Follow_Translate.o" "GuyRN.phl[80]";
+connectAttr "Head_Ctrl_Follow_Rotate.o" "GuyRN.phl[81]";
+connectAttr "Head_Ctrl_translateX.o" "GuyRN.phl[82]";
+connectAttr "Head_Ctrl_translateY.o" "GuyRN.phl[83]";
+connectAttr "Head_Ctrl_translateZ.o" "GuyRN.phl[84]";
+connectAttr "Head_Ctrl_rotateX.o" "GuyRN.phl[85]";
+connectAttr "Head_Ctrl_rotateY.o" "GuyRN.phl[86]";
+connectAttr "Head_Ctrl_rotateZ.o" "GuyRN.phl[87]";
+connectAttr "Head_Ctrl_scaleX.o" "GuyRN.phl[88]";
+connectAttr "Head_Ctrl_scaleY.o" "GuyRN.phl[89]";
+connectAttr "Head_Ctrl_scaleZ.o" "GuyRN.phl[90]";
+connectAttr "Head_Ctrl_visibility.o" "GuyRN.phl[91]";
+connectAttr "L_Brow_Ctrl_translateX.o" "GuyRN.phl[92]";
+connectAttr "L_Brow_Ctrl_translateY.o" "GuyRN.phl[93]";
+connectAttr "L_Brow_Ctrl_translateZ.o" "GuyRN.phl[94]";
+connectAttr "L_Brow_Ctrl_rotateX.o" "GuyRN.phl[95]";
+connectAttr "L_Brow_Ctrl_rotateY.o" "GuyRN.phl[96]";
+connectAttr "L_Brow_Ctrl_rotateZ.o" "GuyRN.phl[97]";
+connectAttr "L_Brow_Ctrl_scaleX.o" "GuyRN.phl[98]";
+connectAttr "L_Brow_Ctrl_scaleY.o" "GuyRN.phl[99]";
+connectAttr "L_Brow_Ctrl_scaleZ.o" "GuyRN.phl[100]";
+connectAttr "L_Brow_Ctrl_visibility.o" "GuyRN.phl[101]";
+connectAttr "R_Brow_Ctrl_translateX.o" "GuyRN.phl[102]";
+connectAttr "R_Brow_Ctrl_translateY.o" "GuyRN.phl[103]";
+connectAttr "R_Brow_Ctrl_translateZ.o" "GuyRN.phl[104]";
+connectAttr "R_Brow_Ctrl_rotateX.o" "GuyRN.phl[105]";
+connectAttr "R_Brow_Ctrl_rotateY.o" "GuyRN.phl[106]";
+connectAttr "R_Brow_Ctrl_rotateZ.o" "GuyRN.phl[107]";
+connectAttr "R_Brow_Ctrl_scaleX.o" "GuyRN.phl[108]";
+connectAttr "R_Brow_Ctrl_scaleY.o" "GuyRN.phl[109]";
+connectAttr "R_Brow_Ctrl_scaleZ.o" "GuyRN.phl[110]";
+connectAttr "R_Brow_Ctrl_visibility.o" "GuyRN.phl[111]";
+connectAttr "L_Eye_Ctrl_translateX.o" "GuyRN.phl[112]";
+connectAttr "L_Eye_Ctrl_translateY.o" "GuyRN.phl[113]";
+connectAttr "L_Eye_Ctrl_translateZ.o" "GuyRN.phl[114]";
+connectAttr "L_Eye_Ctrl_rotateX.o" "GuyRN.phl[115]";
+connectAttr "L_Eye_Ctrl_rotateY.o" "GuyRN.phl[116]";
+connectAttr "L_Eye_Ctrl_rotateZ.o" "GuyRN.phl[117]";
+connectAttr "L_Eye_Ctrl_scaleX.o" "GuyRN.phl[118]";
+connectAttr "L_Eye_Ctrl_scaleY.o" "GuyRN.phl[119]";
+connectAttr "L_Eye_Ctrl_scaleZ.o" "GuyRN.phl[120]";
+connectAttr "L_Eye_Ctrl_visibility.o" "GuyRN.phl[121]";
+connectAttr "R_Eye_Ctrl_translateX.o" "GuyRN.phl[122]";
+connectAttr "R_Eye_Ctrl_translateY.o" "GuyRN.phl[123]";
+connectAttr "R_Eye_Ctrl_translateZ.o" "GuyRN.phl[124]";
+connectAttr "R_Eye_Ctrl_rotateX.o" "GuyRN.phl[125]";
+connectAttr "R_Eye_Ctrl_rotateY.o" "GuyRN.phl[126]";
+connectAttr "R_Eye_Ctrl_rotateZ.o" "GuyRN.phl[127]";
+connectAttr "R_Eye_Ctrl_scaleX.o" "GuyRN.phl[128]";
+connectAttr "R_Eye_Ctrl_scaleY.o" "GuyRN.phl[129]";
+connectAttr "R_Eye_Ctrl_scaleZ.o" "GuyRN.phl[130]";
+connectAttr "R_Eye_Ctrl_visibility.o" "GuyRN.phl[131]";
+connectAttr "L_Arm_01_IK_Ctrl_translateX.o" "GuyRN.phl[132]";
+connectAttr "L_Arm_01_IK_Ctrl_translateY.o" "GuyRN.phl[133]";
+connectAttr "L_Arm_01_IK_Ctrl_translateZ.o" "GuyRN.phl[134]";
+connectAttr "L_Arm_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[135]";
+connectAttr "L_Arm_01_IK_Ctrl_visibility.o" "GuyRN.phl[136]";
+connectAttr "L_Arm_01_IK_Ctrl_rotateX.o" "GuyRN.phl[137]";
+connectAttr "L_Arm_01_IK_Ctrl_rotateY.o" "GuyRN.phl[138]";
+connectAttr "L_Arm_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[139]";
+connectAttr "L_Arm_01_IK_Ctrl_scaleX.o" "GuyRN.phl[140]";
+connectAttr "L_Arm_01_IK_Ctrl_scaleY.o" "GuyRN.phl[141]";
+connectAttr "L_Arm_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[142]";
+connectAttr "L_Arm_03_IK_Ctrl_rotateY.o" "GuyRN.phl[143]";
+connectAttr "L_Arm_03_IK_Ctrl_rotateX.o" "GuyRN.phl[144]";
+connectAttr "L_Arm_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[145]";
+connectAttr "L_Arm_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[146]";
+connectAttr "L_Arm_03_IK_Ctrl_translateX.o" "GuyRN.phl[147]";
+connectAttr "L_Arm_03_IK_Ctrl_translateY.o" "GuyRN.phl[148]";
+connectAttr "L_Arm_03_IK_Ctrl_translateZ.o" "GuyRN.phl[149]";
+connectAttr "L_Arm_03_IK_Ctrl_visibility.o" "GuyRN.phl[150]";
+connectAttr "L_Arm_03_IK_Ctrl_scaleX.o" "GuyRN.phl[151]";
+connectAttr "L_Arm_03_IK_Ctrl_scaleY.o" "GuyRN.phl[152]";
+connectAttr "L_Arm_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[153]";
+connectAttr "L_Arm_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[154]";
+connectAttr "L_Arm_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[155]";
+connectAttr "L_Arm_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[156]";
+connectAttr "L_Arm_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[157]";
+connectAttr "L_Arm_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[158]";
+connectAttr "L_Arm_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[159]";
+connectAttr "L_Arm_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[160]";
+connectAttr "L_Arm_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[161]";
+connectAttr "L_Arm_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[162]";
+connectAttr "L_Arm_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[163]";
+connectAttr "L_Arm_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[164]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[165]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[166]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[167]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[168]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[169]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[170]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[171]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[172]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[173]";
+connectAttr "L_Finger_01_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[174]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[175]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[176]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[177]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[178]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[179]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[180]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[181]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[182]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[183]";
+connectAttr "L_Finger_01_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[184]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[185]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[186]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[187]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[188]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[189]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[190]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[191]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[192]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[193]";
+connectAttr "L_Finger_02_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[194]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[195]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[196]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[197]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[198]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[199]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[200]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[201]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[202]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[203]";
+connectAttr "L_Finger_02_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[204]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[205]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[206]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[207]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[208]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[209]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[210]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[211]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[212]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[213]";
+connectAttr "L_Finger_02_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[214]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[215]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[216]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[217]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[218]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[219]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[220]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[221]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[222]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[223]";
+connectAttr "L_Finger_03_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[224]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[225]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[226]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[227]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[228]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[229]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[230]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[231]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[232]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[233]";
+connectAttr "L_Finger_03_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[234]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[235]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[236]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[237]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[238]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[239]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[240]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[241]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[242]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[243]";
+connectAttr "L_Finger_03_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[244]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[245]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[246]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[247]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[248]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[249]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[250]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[251]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[252]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[253]";
+connectAttr "L_Finger_04_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[254]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[255]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[256]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[257]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[258]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[259]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[260]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[261]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[262]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[263]";
+connectAttr "L_Finger_04_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[264]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[265]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[266]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[267]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[268]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[269]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[270]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[271]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[272]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[273]";
+connectAttr "L_Finger_04_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[274]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[275]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[276]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[277]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[278]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[279]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[280]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[281]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[282]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[283]";
+connectAttr "L_Finger_05_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[284]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[285]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[286]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[287]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[288]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[289]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[290]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[291]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[292]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[293]";
+connectAttr "L_Finger_05_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[294]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[295]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[296]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[297]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[298]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[299]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[300]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[301]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[302]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[303]";
+connectAttr "L_Finger_05_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[304]";
+connectAttr "R_Arm_01_FK_Ctrl_translateX.o" "GuyRN.phl[305]";
+connectAttr "R_Arm_01_FK_Ctrl_translateY.o" "GuyRN.phl[306]";
+connectAttr "R_Arm_01_FK_Ctrl_translateZ.o" "GuyRN.phl[307]";
+connectAttr "R_Arm_01_FK_Ctrl_rotateZ.o" "GuyRN.phl[308]";
+connectAttr "R_Arm_01_FK_Ctrl_rotateX.o" "GuyRN.phl[309]";
+connectAttr "R_Arm_01_FK_Ctrl_rotateY.o" "GuyRN.phl[310]";
+connectAttr "R_Arm_01_FK_Ctrl_scaleX.o" "GuyRN.phl[311]";
+connectAttr "R_Arm_01_FK_Ctrl_scaleY.o" "GuyRN.phl[312]";
+connectAttr "R_Arm_01_FK_Ctrl_scaleZ.o" "GuyRN.phl[313]";
+connectAttr "R_Arm_01_FK_Ctrl_visibility.o" "GuyRN.phl[314]";
+connectAttr "R_Arm_02_FK_Ctrl_translateX.o" "GuyRN.phl[315]";
+connectAttr "R_Arm_02_FK_Ctrl_translateY.o" "GuyRN.phl[316]";
+connectAttr "R_Arm_02_FK_Ctrl_translateZ.o" "GuyRN.phl[317]";
+connectAttr "R_Arm_02_FK_Ctrl_rotateZ.o" "GuyRN.phl[318]";
+connectAttr "R_Arm_02_FK_Ctrl_rotateX.o" "GuyRN.phl[319]";
+connectAttr "R_Arm_02_FK_Ctrl_rotateY.o" "GuyRN.phl[320]";
+connectAttr "R_Arm_02_FK_Ctrl_scaleX.o" "GuyRN.phl[321]";
+connectAttr "R_Arm_02_FK_Ctrl_scaleY.o" "GuyRN.phl[322]";
+connectAttr "R_Arm_02_FK_Ctrl_scaleZ.o" "GuyRN.phl[323]";
+connectAttr "R_Arm_02_FK_Ctrl_visibility.o" "GuyRN.phl[324]";
+connectAttr "GuyRN.phl[325]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_translateX_FearQuaking.o" "GuyRN.phl[326]";
+connectAttr "GuyRN.phl[327]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_translateY_FearQuaking.o" "GuyRN.phl[328]";
+connectAttr "GuyRN.phl[329]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.o" "GuyRN.phl[330]";
+connectAttr "GuyRN.phl[331]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking.oy" "GuyRN.phl[332]";
+connectAttr "GuyRN.phl[333]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking.ox" "GuyRN.phl[334]";
+connectAttr "GuyRN.phl[335]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking.oz" "GuyRN.phl[336]";
+connectAttr "GuyRN.phl[337]" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.ro";
+connectAttr "GuyRN.phl[338]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.o" "GuyRN.phl[339]";
+connectAttr "GuyRN.phl[340]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.o" "GuyRN.phl[341]";
+connectAttr "GuyRN.phl[342]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.o" "GuyRN.phl[343]";
+connectAttr "GuyRN.phl[344]" "FearQuaking.dsm" -na;
+connectAttr "R_Arm_03_FK_Ctrl_visibility_FearQuaking.o" "GuyRN.phl[345]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[346]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[347]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[348]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[349]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[350]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[351]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[352]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[353]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[354]";
+connectAttr "R_Finger_01_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[355]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[356]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[357]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[358]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[359]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[360]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[361]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[362]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[363]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[364]";
+connectAttr "R_Finger_01_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[365]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[366]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[367]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[368]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[369]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[370]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[371]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[372]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[373]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[374]";
+connectAttr "R_Finger_02_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[375]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[376]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[377]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[378]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[379]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[380]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[381]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[382]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[383]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[384]";
+connectAttr "R_Finger_02_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[385]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[386]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[387]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[388]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[389]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[390]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[391]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[392]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[393]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[394]";
+connectAttr "R_Finger_02_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[395]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[396]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[397]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[398]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[399]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[400]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[401]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[402]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[403]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[404]";
+connectAttr "R_Finger_03_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[405]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[406]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[407]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[408]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[409]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[410]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[411]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[412]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[413]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[414]";
+connectAttr "R_Finger_03_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[415]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[416]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[417]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[418]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[419]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[420]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[421]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[422]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[423]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[424]";
+connectAttr "R_Finger_03_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[425]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[426]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[427]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[428]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[429]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[430]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[431]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[432]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[433]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[434]";
+connectAttr "R_Finger_04_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[435]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[436]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[437]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[438]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[439]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[440]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[441]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[442]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[443]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[444]";
+connectAttr "R_Finger_04_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[445]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[446]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[447]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[448]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[449]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[450]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[451]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[452]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[453]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[454]";
+connectAttr "R_Finger_04_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[455]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateX.o" "GuyRN.phl[456]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateY.o" "GuyRN.phl[457]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_translateZ.o" "GuyRN.phl[458]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateX.o" "GuyRN.phl[459]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateY.o" "GuyRN.phl[460]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_rotateZ.o" "GuyRN.phl[461]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleX.o" "GuyRN.phl[462]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleY.o" "GuyRN.phl[463]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_scaleZ.o" "GuyRN.phl[464]";
+connectAttr "R_Finger_05_Knuckle_01_Ctrl_visibility.o" "GuyRN.phl[465]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateX.o" "GuyRN.phl[466]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateY.o" "GuyRN.phl[467]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_translateZ.o" "GuyRN.phl[468]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateX.o" "GuyRN.phl[469]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateY.o" "GuyRN.phl[470]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_rotateZ.o" "GuyRN.phl[471]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleX.o" "GuyRN.phl[472]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleY.o" "GuyRN.phl[473]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_scaleZ.o" "GuyRN.phl[474]";
+connectAttr "R_Finger_05_Knuckle_02_Ctrl_visibility.o" "GuyRN.phl[475]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateX.o" "GuyRN.phl[476]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateY.o" "GuyRN.phl[477]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_translateZ.o" "GuyRN.phl[478]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateX.o" "GuyRN.phl[479]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateY.o" "GuyRN.phl[480]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_rotateZ.o" "GuyRN.phl[481]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleX.o" "GuyRN.phl[482]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleY.o" "GuyRN.phl[483]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_scaleZ.o" "GuyRN.phl[484]";
+connectAttr "R_Finger_05_Knuckle_03_Ctrl_visibility.o" "GuyRN.phl[485]";
+connectAttr "L_Leg_01_IK_Ctrl_translateX.o" "GuyRN.phl[486]";
+connectAttr "L_Leg_01_IK_Ctrl_translateY.o" "GuyRN.phl[487]";
+connectAttr "L_Leg_01_IK_Ctrl_translateZ.o" "GuyRN.phl[488]";
+connectAttr "L_Leg_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[489]";
+connectAttr "L_Leg_01_IK_Ctrl_visibility.o" "GuyRN.phl[490]";
+connectAttr "L_Leg_01_IK_Ctrl_rotateX.o" "GuyRN.phl[491]";
+connectAttr "L_Leg_01_IK_Ctrl_rotateY.o" "GuyRN.phl[492]";
+connectAttr "L_Leg_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[493]";
+connectAttr "L_Leg_01_IK_Ctrl_scaleX.o" "GuyRN.phl[494]";
+connectAttr "L_Leg_01_IK_Ctrl_scaleY.o" "GuyRN.phl[495]";
+connectAttr "L_Leg_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[496]";
+connectAttr "L_Leg_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[497]";
+connectAttr "L_Leg_03_IK_Ctrl_rotateY.o" "GuyRN.phl[498]";
+connectAttr "L_Leg_03_IK_Ctrl_rotateX.o" "GuyRN.phl[499]";
+connectAttr "L_Leg_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[500]";
+connectAttr "L_Leg_03_IK_Ctrl_translateX.o" "GuyRN.phl[501]";
+connectAttr "L_Leg_03_IK_Ctrl_translateY.o" "GuyRN.phl[502]";
+connectAttr "L_Leg_03_IK_Ctrl_translateZ.o" "GuyRN.phl[503]";
+connectAttr "L_Leg_03_IK_Ctrl_visibility.o" "GuyRN.phl[504]";
+connectAttr "L_Leg_03_IK_Ctrl_scaleX.o" "GuyRN.phl[505]";
+connectAttr "L_Leg_03_IK_Ctrl_scaleY.o" "GuyRN.phl[506]";
+connectAttr "L_Leg_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[507]";
+connectAttr "L_Leg_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[508]";
+connectAttr "L_Leg_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[509]";
+connectAttr "L_Leg_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[510]";
+connectAttr "L_Leg_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[511]";
+connectAttr "L_Leg_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[512]";
+connectAttr "L_Leg_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[513]";
+connectAttr "L_Leg_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[514]";
+connectAttr "L_Leg_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[515]";
+connectAttr "L_Leg_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[516]";
+connectAttr "L_Leg_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[517]";
+connectAttr "L_Leg_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[518]";
+connectAttr "R_Leg_01_IK_Ctrl_translateX.o" "GuyRN.phl[519]";
+connectAttr "R_Leg_01_IK_Ctrl_translateY.o" "GuyRN.phl[520]";
+connectAttr "R_Leg_01_IK_Ctrl_translateZ.o" "GuyRN.phl[521]";
+connectAttr "R_Leg_01_IK_Ctrl_Operating_Space.o" "GuyRN.phl[522]";
+connectAttr "R_Leg_01_IK_Ctrl_visibility.o" "GuyRN.phl[523]";
+connectAttr "R_Leg_01_IK_Ctrl_rotateX.o" "GuyRN.phl[524]";
+connectAttr "R_Leg_01_IK_Ctrl_rotateY.o" "GuyRN.phl[525]";
+connectAttr "R_Leg_01_IK_Ctrl_rotateZ.o" "GuyRN.phl[526]";
+connectAttr "R_Leg_01_IK_Ctrl_scaleX.o" "GuyRN.phl[527]";
+connectAttr "R_Leg_01_IK_Ctrl_scaleY.o" "GuyRN.phl[528]";
+connectAttr "R_Leg_01_IK_Ctrl_scaleZ.o" "GuyRN.phl[529]";
+connectAttr "R_Leg_03_IK_Ctrl_rotateZ.o" "GuyRN.phl[530]";
+connectAttr "R_Leg_03_IK_Ctrl_rotateX.o" "GuyRN.phl[531]";
+connectAttr "R_Leg_03_IK_Ctrl_rotateY.o" "GuyRN.phl[532]";
+connectAttr "R_Leg_03_IK_Ctrl_Operating_Space.o" "GuyRN.phl[533]";
+connectAttr "R_Leg_03_IK_Ctrl_translateX.o" "GuyRN.phl[534]";
+connectAttr "R_Leg_03_IK_Ctrl_translateZ.o" "GuyRN.phl[535]";
+connectAttr "R_Leg_03_IK_Ctrl_translateY.o" "GuyRN.phl[536]";
+connectAttr "R_Leg_03_IK_Ctrl_visibility.o" "GuyRN.phl[537]";
+connectAttr "R_Leg_03_IK_Ctrl_scaleX.o" "GuyRN.phl[538]";
+connectAttr "R_Leg_03_IK_Ctrl_scaleY.o" "GuyRN.phl[539]";
+connectAttr "R_Leg_03_IK_Ctrl_scaleZ.o" "GuyRN.phl[540]";
+connectAttr "R_Leg_IK_Handle_Ctrl_translateX.o" "GuyRN.phl[541]";
+connectAttr "R_Leg_IK_Handle_Ctrl_translateY.o" "GuyRN.phl[542]";
+connectAttr "R_Leg_IK_Handle_Ctrl_translateZ.o" "GuyRN.phl[543]";
+connectAttr "R_Leg_IK_Handle_Ctrl_Operating_Space.o" "GuyRN.phl[544]";
+connectAttr "R_Leg_IK_Handle_Ctrl_visibility.o" "GuyRN.phl[545]";
+connectAttr "R_Leg_IK_Handle_Ctrl_rotateX.o" "GuyRN.phl[546]";
+connectAttr "R_Leg_IK_Handle_Ctrl_rotateY.o" "GuyRN.phl[547]";
+connectAttr "R_Leg_IK_Handle_Ctrl_rotateZ.o" "GuyRN.phl[548]";
+connectAttr "R_Leg_IK_Handle_Ctrl_scaleX.o" "GuyRN.phl[549]";
+connectAttr "R_Leg_IK_Handle_Ctrl_scaleY.o" "GuyRN.phl[550]";
+connectAttr "R_Leg_IK_Handle_Ctrl_scaleZ.o" "GuyRN.phl[551]";
+connectAttr "L_Arm_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[552]";
+connectAttr "L_Arm_IKFK_Ctrl_visibility.o" "GuyRN.phl[553]";
+connectAttr "L_Arm_IKFK_Ctrl_translateX.o" "GuyRN.phl[554]";
+connectAttr "L_Arm_IKFK_Ctrl_translateY.o" "GuyRN.phl[555]";
+connectAttr "L_Arm_IKFK_Ctrl_translateZ.o" "GuyRN.phl[556]";
+connectAttr "L_Arm_IKFK_Ctrl_rotateX.o" "GuyRN.phl[557]";
+connectAttr "L_Arm_IKFK_Ctrl_rotateY.o" "GuyRN.phl[558]";
+connectAttr "L_Arm_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[559]";
+connectAttr "L_Arm_IKFK_Ctrl_scaleX.o" "GuyRN.phl[560]";
+connectAttr "L_Arm_IKFK_Ctrl_scaleY.o" "GuyRN.phl[561]";
+connectAttr "L_Arm_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[562]";
+connectAttr "R_Arm_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[563]";
+connectAttr "R_Arm_IKFK_Ctrl_visibility.o" "GuyRN.phl[564]";
+connectAttr "R_Arm_IKFK_Ctrl_translateX.o" "GuyRN.phl[565]";
+connectAttr "R_Arm_IKFK_Ctrl_translateY.o" "GuyRN.phl[566]";
+connectAttr "R_Arm_IKFK_Ctrl_translateZ.o" "GuyRN.phl[567]";
+connectAttr "R_Arm_IKFK_Ctrl_rotateX.o" "GuyRN.phl[568]";
+connectAttr "R_Arm_IKFK_Ctrl_rotateY.o" "GuyRN.phl[569]";
+connectAttr "R_Arm_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[570]";
+connectAttr "R_Arm_IKFK_Ctrl_scaleX.o" "GuyRN.phl[571]";
+connectAttr "R_Arm_IKFK_Ctrl_scaleY.o" "GuyRN.phl[572]";
+connectAttr "R_Arm_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[573]";
+connectAttr "L_Leg_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[574]";
+connectAttr "L_Leg_IKFK_Ctrl_visibility.o" "GuyRN.phl[575]";
+connectAttr "L_Leg_IKFK_Ctrl_translateX.o" "GuyRN.phl[576]";
+connectAttr "L_Leg_IKFK_Ctrl_translateY.o" "GuyRN.phl[577]";
+connectAttr "L_Leg_IKFK_Ctrl_translateZ.o" "GuyRN.phl[578]";
+connectAttr "L_Leg_IKFK_Ctrl_rotateX.o" "GuyRN.phl[579]";
+connectAttr "L_Leg_IKFK_Ctrl_rotateY.o" "GuyRN.phl[580]";
+connectAttr "L_Leg_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[581]";
+connectAttr "L_Leg_IKFK_Ctrl_scaleX.o" "GuyRN.phl[582]";
+connectAttr "L_Leg_IKFK_Ctrl_scaleY.o" "GuyRN.phl[583]";
+connectAttr "L_Leg_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[584]";
+connectAttr "R_Leg_IKFK_Ctrl_IKFK_Switch.o" "GuyRN.phl[585]";
+connectAttr "R_Leg_IKFK_Ctrl_visibility.o" "GuyRN.phl[586]";
+connectAttr "R_Leg_IKFK_Ctrl_translateX.o" "GuyRN.phl[587]";
+connectAttr "R_Leg_IKFK_Ctrl_translateY.o" "GuyRN.phl[588]";
+connectAttr "R_Leg_IKFK_Ctrl_translateZ.o" "GuyRN.phl[589]";
+connectAttr "R_Leg_IKFK_Ctrl_rotateX.o" "GuyRN.phl[590]";
+connectAttr "R_Leg_IKFK_Ctrl_rotateY.o" "GuyRN.phl[591]";
+connectAttr "R_Leg_IKFK_Ctrl_rotateZ.o" "GuyRN.phl[592]";
+connectAttr "R_Leg_IKFK_Ctrl_scaleX.o" "GuyRN.phl[593]";
+connectAttr "R_Leg_IKFK_Ctrl_scaleY.o" "GuyRN.phl[594]";
+connectAttr "R_Leg_IKFK_Ctrl_scaleZ.o" "GuyRN.phl[595]";
 connectAttr "Transform_Ctrl_scaleX1.o" "cougarRN.phl[1]";
 connectAttr "Transform_Ctrl_scaleY1.o" "cougarRN.phl[2]";
 connectAttr "Transform_Ctrl_scaleZ1.o" "cougarRN.phl[3]";
@@ -7015,7 +7611,9 @@ connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "Env_Lyr.id";
 connectAttr "CougarBreathing.sl" "BaseAnimation.chsl[0]";
+connectAttr "FearQuaking.sl" "BaseAnimation.chsl[1]";
 connectAttr "CougarBreathing.play" "BaseAnimation.cdly[0]";
+connectAttr "FearQuaking.play" "BaseAnimation.cdly[1]";
 connectAttr "BaseAnimation.csol" "CougarBreathing.sslo";
 connectAttr "BaseAnimation.fgwt" "CougarBreathing.pwth";
 connectAttr "BaseAnimation.omte" "CougarBreathing.pmte";
@@ -7094,6 +7692,153 @@ connectAttr "CougarBreathing.fgwt" "Camera_Ctrl_Operating_Space_CougarBreathing.
 connectAttr "Camera_Ctrl_Operating_Space.o" "Camera_Ctrl_Operating_Space_CougarBreathing.ia"
 		;
 connectAttr "Camera_Ctrl_Operating_Space_CougarBreathing_inputB.o" "Camera_Ctrl_Operating_Space_CougarBreathing.ib"
+		;
+connectAttr "BaseAnimation.csol" "FearQuaking.sslo";
+connectAttr "BaseAnimation.fgwt" "FearQuaking.pwth";
+connectAttr "BaseAnimation.omte" "FearQuaking.pmte";
+connectAttr "Neck_Ctrl_visibility_FearQuaking.msg" "FearQuaking.bnds[0]";
+connectAttr "Neck_Ctrl_translateX_FearQuaking.msg" "FearQuaking.bnds[1]";
+connectAttr "Neck_Ctrl_translateY_FearQuaking.msg" "FearQuaking.bnds[2]";
+connectAttr "Neck_Ctrl_translateZ_FearQuaking.msg" "FearQuaking.bnds[3]";
+connectAttr "Neck_Ctrl_rotate_FearQuaking.msg" "FearQuaking.bnds[7]";
+connectAttr "Neck_Ctrl_scaleX_FearQuaking.msg" "FearQuaking.bnds[8]";
+connectAttr "Neck_Ctrl_scaleY_FearQuaking.msg" "FearQuaking.bnds[9]";
+connectAttr "Neck_Ctrl_scaleZ_FearQuaking.msg" "FearQuaking.bnds[10]";
+connectAttr "Neck_Ctrl_Follow_Translate_FearQuaking.msg" "FearQuaking.bnds[11]";
+connectAttr "Neck_Ctrl_Follow_Rotate_FearQuaking.msg" "FearQuaking.bnds[12]";
+connectAttr "R_Arm_03_FK_Ctrl_visibility_FearQuaking.msg" "FearQuaking.bnds[13]"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateX_FearQuaking.msg" "FearQuaking.bnds[14]"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateY_FearQuaking.msg" "FearQuaking.bnds[15]"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.msg" "FearQuaking.bnds[16]"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking.msg" "FearQuaking.bnds[20]";
+connectAttr "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.msg" "FearQuaking.bnds[21]";
+connectAttr "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.msg" "FearQuaking.bnds[22]";
+connectAttr "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.msg" "FearQuaking.bnds[23]";
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_visibility_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_visibility_FearQuaking.wb";
+connectAttr "Neck_Ctrl_visibility.o" "Neck_Ctrl_visibility_FearQuaking.ia";
+connectAttr "Neck_Ctrl_visibility_FearQuaking_inputB.o" "Neck_Ctrl_visibility_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_translateX_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_translateX_FearQuaking.wb";
+connectAttr "Neck_Ctrl_translateX.o" "Neck_Ctrl_translateX_FearQuaking.ia";
+connectAttr "Neck_Ctrl_translateX_FearQuaking_inputB.o" "Neck_Ctrl_translateX_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_translateY_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_translateY_FearQuaking.wb";
+connectAttr "Neck_Ctrl_translateY.o" "Neck_Ctrl_translateY_FearQuaking.ia";
+connectAttr "Neck_Ctrl_translateY_FearQuaking_inputB.o" "Neck_Ctrl_translateY_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_translateZ_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_translateZ_FearQuaking.wb";
+connectAttr "Neck_Ctrl_translateZ.o" "Neck_Ctrl_translateZ_FearQuaking.ia";
+connectAttr "Neck_Ctrl_translateZ_FearQuaking_inputB.o" "Neck_Ctrl_translateZ_FearQuaking.ib"
+		;
+connectAttr "Neck_Ctrl_rotateX.o" "Neck_Ctrl_rotate_FearQuaking.iax";
+connectAttr "Neck_Ctrl_rotateY.o" "Neck_Ctrl_rotate_FearQuaking.iay";
+connectAttr "Neck_Ctrl_rotateZ.o" "Neck_Ctrl_rotate_FearQuaking.iaz";
+connectAttr "FearQuaking.oram" "Neck_Ctrl_rotate_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_rotate_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_rotate_FearQuaking.wb";
+connectAttr "Neck_Ctrl_rotate_FearQuaking_inputBX.o" "Neck_Ctrl_rotate_FearQuaking.ibx"
+		;
+connectAttr "Neck_Ctrl_rotate_FearQuaking_inputBY.o" "Neck_Ctrl_rotate_FearQuaking.iby"
+		;
+connectAttr "Neck_Ctrl_rotate_FearQuaking_inputBZ.o" "Neck_Ctrl_rotate_FearQuaking.ibz"
+		;
+connectAttr "FearQuaking.sam" "Neck_Ctrl_scaleX_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_scaleX_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_scaleX_FearQuaking.wb";
+connectAttr "Neck_Ctrl_scaleX.o" "Neck_Ctrl_scaleX_FearQuaking.ia";
+connectAttr "Neck_Ctrl_scaleX_FearQuaking_inputB.o" "Neck_Ctrl_scaleX_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.sam" "Neck_Ctrl_scaleY_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_scaleY_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_scaleY_FearQuaking.wb";
+connectAttr "Neck_Ctrl_scaleY.o" "Neck_Ctrl_scaleY_FearQuaking.ia";
+connectAttr "Neck_Ctrl_scaleY_FearQuaking_inputB.o" "Neck_Ctrl_scaleY_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.sam" "Neck_Ctrl_scaleZ_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_scaleZ_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_scaleZ_FearQuaking.wb";
+connectAttr "Neck_Ctrl_scaleZ.o" "Neck_Ctrl_scaleZ_FearQuaking.ia";
+connectAttr "Neck_Ctrl_scaleZ_FearQuaking_inputB.o" "Neck_Ctrl_scaleZ_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_Follow_Translate_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_Follow_Translate_FearQuaking.wb";
+connectAttr "Neck_Ctrl_Follow_Translate.o" "Neck_Ctrl_Follow_Translate_FearQuaking.ia"
+		;
+connectAttr "Neck_Ctrl_Follow_Translate_FearQuaking_inputB.o" "Neck_Ctrl_Follow_Translate_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "Neck_Ctrl_Follow_Rotate_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "Neck_Ctrl_Follow_Rotate_FearQuaking.wb";
+connectAttr "Neck_Ctrl_Follow_Rotate.o" "Neck_Ctrl_Follow_Rotate_FearQuaking.ia"
+		;
+connectAttr "Neck_Ctrl_Follow_Rotate_FearQuaking_inputB.o" "Neck_Ctrl_Follow_Rotate_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_visibility_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_visibility_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_visibility.o" "R_Arm_03_FK_Ctrl_visibility_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_visibility_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_visibility_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_translateX_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_translateX_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_translateX.o" "R_Arm_03_FK_Ctrl_translateX_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateX_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_translateX_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_translateY_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_translateY_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_translateY.o" "R_Arm_03_FK_Ctrl_translateY_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateY_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_translateY_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_translateZ.o" "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_translateZ_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_translateZ_FearQuaking.ib"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotateX.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.iax"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotateY.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.iay"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotateZ.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.iaz"
+		;
+connectAttr "FearQuaking.oram" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBX.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.ibx"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBY.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.iby"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_rotate_FearQuaking_inputBZ.o" "R_Arm_03_FK_Ctrl_rotate_FearQuaking.ibz"
+		;
+connectAttr "FearQuaking.sam" "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_scaleX.o" "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_scaleX_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_scaleX_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.sam" "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_scaleY.o" "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_scaleY_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_scaleY_FearQuaking.ib"
+		;
+connectAttr "FearQuaking.sam" "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.acm";
+connectAttr "FearQuaking.bgwt" "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.wa";
+connectAttr "FearQuaking.fgwt" "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.wb";
+connectAttr "R_Arm_03_FK_Ctrl_scaleZ.o" "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.ia"
+		;
+connectAttr "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking_inputB.o" "R_Arm_03_FK_Ctrl_scaleZ_FearQuaking.ib"
 		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of Shot_01.ma
